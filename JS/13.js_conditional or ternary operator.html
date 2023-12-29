@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>JS-13</title>
+
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+#conditional{
+width:auto;
+height:33cm;
+font-size:25px;
+background-color:black;
+color:white;
+}
+
+span{
+color:green;
+margin-left:1cm;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>CONDITIONAL OR TERNARY OPERATOR(?!)</h1>
+
+<div id="conditional"> 
+
+<h2>This is single line condition.</h2> <br>
+
+var age=18;<br>
+vote=age>=18? "Eligible for vote!" : "Not eligible for vote" ;  //( ? is conditional operator,it checks the condition age>=18 )<br>
+
+console.log("your Age is "+age+" so, you're ",vote);     <span>OUTPUT:your Age is 18 so, you're  Eligible for vote!</span><<br>
+
+var age=15;<br>
+vote=age>=18? "Eligible for vote!" : "Not eligible for vote" ;  //(? is conditional operator,it checks the condition age>=18)<br>
+
+console.log("your Age is "+age+" so, you're ",vote);   <span>OUTPUT:your Age is 15 so, you're  Not eligible for vote</span><br>
+
+
+<h2>Handling null values</h2><br>
+
+function welcome(name)<br>
+{<br>
+var result=name?name: "no_name"<br>
+console.log("welcome!"+ result); <span>OUTPUT:welcome!sanjay</span> <br>
+}<br>
+
+welcome("sanjay");<br>
+
+welcome("");         <span>OUTPUT:welcome!no_name</span><br>
+
+//object type variable<br>
+
+user={'name':'sanjay','age':18}<br>
+console.log(user);       <span>OUTPUT:{name: 'sanjay', age: 18}</span><br>
+console.log(user.age);<span>OUTPUT:18</span><br><br>
+
+
+var greeting=(user)=>{<br>
+
+const person=user.name?user.name:"no_name";<br>
+return "hello! " + person;                  <span>OUTPUT:hello! sanjay</span><<br>
+
+}<br>
+
+console.log(greeting(user));<br><br>
+
+<h2>This is Multiple condition.It is also called as CONDITIONAL CHAINS</h2>
+<br>
+
+const avg=95;<br>
+const grade=avg>=90? "GRADE-A" : avg>=80? "GRADE-B" : avg>=70? "GRADE - C" : <br>avg>=60? "GRADE - D" :avg>=50? "GRADE - E" : avg>=35? "GRADE - F" : "FAIL";<br>
+console.log(grade);     <span>OUTPUT:GRADE-A</span><br>
+
+
+
+
+</div>
+
+
+<script>
+
+alert("hai! welcome to JS");
+
+//This is single line condition.
+
+var age=18;
+vote=age>=18? "Eligible for vote!" : "Not eligible for vote" ;  //( ? is conditional operator,it checks the condition age>=18 )
+
+console.log("your Age is "+age+" so, you're ",vote);     //OUTPUT:your Age is 18 so, you're  Eligible for vote!
+
+var age=15;
+vote=age>=18? "Eligible for vote!" : "Not eligible for vote" ;  //(? is conditional operator,it checks the condition age>=18)
+
+console.log("your Age is "+age+" so, you're ",vote);   //OUTPUT:your Age is 15 so, you're  Not eligible for vote
+
+
+//Handling null values
+
+function welcome(name){
+var result=name?name: "no_name"
+console.log("welcome!"+ result); // OUTPUT:welcome!sanjay 
+}
+
+welcome("sanjay");
+
+welcome("");         //OUTPUT:welcome!no_name
+
+//object type variable
+
+user={'name':'sanjay','age':18}
+console.log(user);       //OUTPUT:{name: 'sanjay', age: 18}
+console.log(user.age);//OUTPUT:18
+
+
+var greeting=(user)=>{
+
+const person=user.name?user.name:"no_name";
+return "hello! " + person;                  //OUTPUT:hello! sanjay
+
+}
+
+console.log(greeting(user));
+
+//This is Multiple condition.
+//It is also called as CONDITIONAL CHAINS
+
+const avg=95;
+const grade=avg>=90? "GRADE-A" : avg>=80? "GRADE-B" : avg>=70? "GRADE - C" : avg>=60? "GRADE - D" :avg>=50? "GRADE - E" : avg>=35? "GRADE - F" : "FAIL";
+console.log(grade);     //OUTPUT:GRADE-A
+
+
+</script>
+
+</body>
+
+
+</html>

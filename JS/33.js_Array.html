@@ -1,0 +1,657 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    
+<style>
+h1{
+    color:red;
+    font-size:30px;
+    text-align:center;
+}
+
+h2{
+    color:darkgreen;
+}
+ol{
+    color:green;
+    font-size:20px;
+
+}
+
+
+</style>
+
+</head>
+<body>
+<h1>Array<span style="color:green; margin-left:6cm;font-style:italic;font-size:0.8cm;">see outputs in console tab.(ctrl + shift +i)</span></h1>
+<h2>Methods</h2>
+<ol>
+<li>foreach</li>
+<li>map</li>
+<li>slice</li>
+<li>splice</li>
+<li>concat</li>
+<li>sort</li>
+<li>fill</li>
+<li>includes</li>
+<li>join</li>
+<li>Reverse</li>
+<li>Push</li>
+<li>pop</li>
+<li>shift</li>
+<li>unshift</li>
+<li>indexof</li>
+<li>lastIndexof</li>
+<li>every</li>
+<li>Some</li>
+<li>filter</li>
+<li>find</li>
+<li>findIndex</li>
+<li>findLast</li>
+<li>findLastIndex</li>
+<li>from</li>
+<li>isArray</li>
+<li>Flat</li>
+<li>reduce</li>
+</ol>
+
+
+
+    
+    <script>
+
+let a=[10,20,30,40,50,60,70,80,90,100]
+
+console.log(a);
+console.table(a);
+
+console.log("*******************");
+console.log("forEach()");
+
+const number = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+//arguments -->   value,index,array
+number.forEach((value,index)=>{
+    console.log("index :"+""+index,"value :"+""+value);
+    
+});   
+
+
+const users = [
+
+    {full_name:"ram",age:12,city:"coimbatore",salary:"10000"} ,
+
+    {full_name:"raj",age:13,city:"tirupur",salary:"20000"} ,
+
+    {full_name:"sanjay",age:19,city:"trichy",salary:"100000"},
+
+    {full_name:"madhan",age:18,city:"coimbatore",salary:"100000"},
+
+];
+// console.table(users);    //forEach() prints the each values of array 
+users.forEach((value)=>{
+    console.log(value.full_name);
+    console.log(value.age);
+    console.log(value.city);
+    console.log(value.salary);
+});
+
+console.log("*******************");
+console.log("map()");          // In this method , we can change the Each and Every Element and we can able to make change and to store the result
+
+const numbers = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+//console.log(numbers);
+//map(value , index , array)  (In this case the first parameter is compulsory, and the last two parameters are optional)
+
+let square_root = numbers.map((value)=>{   //Here the "value" is a user define name
+return Math.sqrt(value).toFixed(3);       // toFixed() is used to fix the value after the decimal point
+}); 
+console.table(square_root);  
+console.log("________________________");
+
+const Users = [
+{name:"Sham",age:15,city:"chennai",salary:10500},
+{name:"ram",age:20,city:"coimbatore",salary:20000},
+{name:"kumar",age:17,city:"tirupur",salary:21000},
+{name:"raj",age:25,city:"salem",salary:25000},
+{name:"ragul",age:26,city:"trichy",salary:29000},
+{name:"hari",age:30,city:"bangalore",salary:30000}
+]
+console.table(Users);
+
+var Eligible_status = Users.map((User)=>({
+   name:User.name,
+   age:User.age,
+   city:User.city,
+   salary:User.salary,
+   status:User.age>=18?"Eligible":"Not Eligible"
+}));
+console.log("*********Eligible_status with map() function*********")
+console.table(Eligible_status);
+
+console.log("Here , above we have only 4 keys , so we can Easily type the keys , suppose In the object we have 30 or 40 keys(high amount of keys) We cannot able to type the all keys because it is difficult and time consuming process , So the Javascript have the best feature called spread operator.");
+console.log("By Using the spread operator, we can automatically generate the Users record by default , we can only type the keys which is become to modify.");
+console.log("...Users");
+console.log("In the above , the three dots are known as spread operator.");
+console.log("************print the same records by using the spread operator(...Users)************");
+
+var Eligible_status = Users.map((User)=>({
+   ...User,   //Here we can  automatically generate the all records by using spread operator(...);
+   status:User.age>=18?"Eligible":"Not Eligible"
+}));
+console.table(Eligible_status);
+
+console.log("**************************");
+
+console.log("slice()");          // we can slice the particular partition of array and store it  into another array.
+console.log("we can slice the particular partition of array and store it  into another array.");
+const Numbers =[1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+//slice(start,end);   //it consist of two values start(where we can start the slice) , end(where we can end the slice)
+console.log("it consist of two values start(where we can start the slice) , end(where we can end the slice)");
+console.log(Numbers);
+console.log("slice : "+ Numbers.slice());   // Infront of Numbers.slice() we can use string(slice :) , so the output will be string.
+console.log("Infront of Numbers.slice() we can use string(slice :) , so the output will be string.");
+console.log( Numbers.slice());  //without using string
+
+// now we can use index value for slice()
+
+console.log(Numbers.slice(2));   // Here the first two values are splice(remove) so except first 2 values are print. It can consider the index value not array element.so 0 1 2 removed.
+console.log(Numbers.slice(2,5));  // Here the elements of index from 2 to 5 are print ,so the index value of 6 is  5 , so it can print till 6 but not 6. so the output is 3,4,5
+console.log("Here the elements of index from 2 to 5 are print ,so the index value of 6 is  5 , so it can print till 6 but not 6. so the output is 3,4,5");
+
+console.log("************************************************");
+
+console.log("splice()");   // we can remove the specific elements and insert the new element of array easily by using splice() method.
+console.log("we can remove the specific elements of array easily by using splice() method.");
+
+const n1 = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+console.log(n1);
+removed_items= n1.splice(2); // Here , Except the  index value 0,1 are removed which means 3,4,5,6,7,8,9,10 are removed and stored into the variable removed_items
+console.log("removed items : "+removed_items); 
+console.log("after splice() : "+n1);   //Except the removed values which is 1 , 2 are stored in n1 so here the values 1 and 2 are printed.
+
+const n2 = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+console.log(n2);
+removed_items= n2.splice(2,3); //Here , the element is removed from the index value 2, and the value 3 is represent the count which means how many value are removed from the index value.
+console.log("Here , the element is removed from the index value 2, and the value 3 is represent the count which means how many value are removed from the index value.");
+console.log("removed items : "+removed_items); //So , here the removed elements are 3,4,5 ,the index value of 3 is 2.
+console.log("So , here the removed elements are 3,4,5");
+console.log("after splice() : "+n2); // After splice() , the array elements are 1,2,6,7,8,9,10
+console.log("After splice() , the array elements are 1,2,6,7,8,9,10");
+
+const n3 = [1 , 2 , 3 , 4 ,5];
+console.log(n3);
+remove_items = n3.splice(2,3,30,40,50);   //here , the elements removed from the index value 2 till the count 3.
+// we can also insert the array elements.
+insert_items = n3.splice(2,3,[300,400,500]);
+console.log("insert items : "+n3);
+console.log(n3);
+console.log(" we can also insert the array elements.")
+console.log("here , the elements removed from the index value 2 till the count 3.")
+console.log(remove_items);
+console.log("modified array : "+n3);  //here , the inserted values 30 , 40 , 50 are placed instead of removed values 3 , 4 , 5
+console.log("here , the inserted values 30 , 40 , 50 are placed instead of removed values 3 , 4 , 5");
+console.log("We can also insert the value without remove the items and we can place the insert value to the specific index value");
+const n4 = [1 , 2 , 3 , 4 , 5 , 6];
+console.log("before splice() which means before insert")
+console.log(n4);
+n4.splice(2,0,600,700,800,900);  // here the first value 2 represent the particular index value to insert the elements. 0 represent the count to be removed here we put zero so no values can remove. 600,700,800,900 represent the new value to insert in the particular index value(The index value is 2 , we can specify in the splice function)
+console.log("After splice() which means After insert")
+console.log(n4);   // output :  [1, 2, 600, 700, 800, 900, 3, 4, 5, 6]
+console.log("here the first value 2 represent the particular index value to insert the elements. 0 represent the count to be removed here we put zero so no values can remove. 600,700,800,900 represent the new value to insert in the particular index value(The index value is 2 , we can specify in the splice function)");
+
+console.log("****************************************************");
+
+console.log("concat()"); //Here , we can MERGE the two array to form one array
+
+const a1 =[10 , 20 , 30];
+const b1=[40 , 50 , 60];
+const c1=[70 ,80 , 90];
+
+var d1=a1.concat(b1);         // Here , b1 is concatenated to a1 and store into d1
+console.log(d1);           //output is [10, 20, 30, 40, 50, 60]
+var d1=a1.concat(b1 , c1);      // Here ,we can add more than one Argument so, b1 and c1 are concatenated to a1 and store into d1
+console.log(d1);            //output is [10, 20, 30, 40, 50, 60, 70, 80, 90]
+var d1 = a1.concat(b1 , 1000 , 2000 , 3000 , 4000 , 5000);   //Here , we can also add VALUES in argument for concatenate.
+console.log(d1);     //output is [10, 20, 30, 40, 50, 60, 1000, 2000, 3000, 4000, 5000]
+var d1 = a1.concat(b1 , 1000 , 2000 , 3000 , 4000 , 5000 , ['HTML' , 'CSS' , 'JS' , 'MONGODB' , 'PHP']);  // Here , we can also add NESTED ARRAY in argument for concatenate.
+console.log(d1); //output is [10, 20, 30, 40, 50, 60, 1000, 2000, 3000, 4000, 5000, 'HTML', 'CSS', 'JS', 'MONGODB', 'PHP']
+console.table(d1);
+console.log("****************************************************");
+console.log("sort()");
+console.log("sort() is used to sorting the array in ascending or descending order");
+
+const names=["kumar" , "zara" , "rocky" , "raj" , "alice" , "blast"];
+console.log("before sort :",names);
+names.sort();
+console.log("After sort :",names);
+const num=[23 , 45, 56, 12 , 10 , 2 , 5  , 9]
+console.log("original array",num);
+num.sort((a,b)=>{
+    return a-b;   //return a-b refers to sort ascending order, suppose it have b-a that refers to descendin order.
+})  //here , we can use the call back function with arrow function.
+console.log("Ascending order",num);
+
+const num1=[23 , 45, 56, 12 , 10 , 2 , 5  , 9]
+
+num1.sort((a,b)=>{
+    return b-a;   //return b-a that refers to descendin order.
+})  //here , we can use the call back function with arrow function.
+console.log("Descending order",num1);
+
+const num2 = [12 , 34 , 23 , 100 , 200 , 5 , 7 , 600]
+num2.sort();
+console.log("normal sorting",num2); // here the sorting function just sort the 1st value of number only , it does not consider the 2nd or 3rd value , so we have to go for call back function. The call back function Example  is in the Above.
+console.log("here the sorting function just sort the 1st value of number only , it does not consider the 2nd or 3rd value , so we have to go for call back function. The call back function Example  is in the Above.")
+ 
+const user=[
+{name:"Ram",age:12,city:"coimbatore",salary:10000},
+{name:"Sam",age:15,city:"chennai",salary:12000},
+{name:"Ravi",age:22,city:"salem",salary:20000},
+{name:"Joes",age:18,city:"tirupur",salary:15000},
+{name:"Aureen",age:47,city:"dindigul",salary:18000},
+{name:"sanjay",age:10,city:"trichy",salary:22000},
+] 
+console.log("original table")
+console.table(user);
+console.log("we can easily sort the separate field like name or age or city or salary.")
+user.sort((a,b)=>{
+    return a.age - b.age;
+
+})
+console.log("Age sorted array");
+console.table(user);
+
+
+
+
+console.log("we can also sort the strings like name , city.")
+
+user.sort((a,b)=>{
+if(a.name> b.name ) return 1
+if(a.name < b.name ) return -1
+return 0;
+})
+console.log("name sorted Array");
+console.table(user);
+
+ 
+user.sort((a,b)=>{
+    if(a.city > b.city) return 1
+    if(a.city < b.city) return -1
+    return 0;
+})
+
+console.log("city sorted Array");
+console.table(user);
+
+
+console.log("****************************************************");
+console.log("fill()");
+console.log("we can fill the Any value instead of the Actual array value.")
+console.log("syntax : "+"fill(value,start,end)"+"Here value is mandatory but start and end are optional");
+let n = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9]
+console.log("Before fill() :" +n);
+f=n.fill(20);
+console.log(f);
+console.log("Here Above the value 20 is fill instead of all array value");
+f = n.fill('a',2,7)
+console.log(f);
+console.log("Here Above the value 'a' is filled from the starting index 2 to Ending index 7, the 'a' is fill till index 7 but not 7th index.");
+
+console.log("****************************************************");
+console.log("includes()");
+console.log("syntax :"+"includes(value , start_index)")
+console.log("includes() function is used to check whether the array element is there in the array or not");
+console.log("It returns only boolean value")
+console.log("If the element is there in the array it returns true, ")
+console.log("If the element is not there in the array it returns false")
+
+const products = ["pen" , "pencil" , "Eraser" , "Scale" , "box" ,"paper" , "note" ,"book" , "sketch" , "laptop"]
+
+console.log(products.includes("laptop"));
+console.log("Here above, we can only give the value(phone) for includes() so it print true")
+console.log(products.includes("Scale",5))
+console.log("Here above ,we can specified the value(array element) and start_index, the start_index is 5 so the function can check from the 5th index. here after 5th index 'Scale' element not there so the result is false");
+
+console.log("****************************************************");
+console.log("join()");
+
+const products1 = ["pen" , "pencil" , "Eraser" , "Scale" , "box" ,"paper" , "note" ,"book" , "sketch" , "laptop"]
+console.log("syntax : "+ "join(separator)");
+console.log("before join :",products1);
+console.log("After join without using separator",products1.join()) ;
+
+ j = products1.join("   |   ");
+
+ console.log("After join with separator",j);
+ console.log("The join() performs convert the array element to strings and also it separate with any character like '|' , '*' , 'any alphabets and numbers'" );
+ console.log("The default separator of join() function is comma(,) but we can easily modify the separator in join() function.")
+
+console.log("****************************************************");
+console.log("Reverse()");
+console.log("This Reverse() function is perform to Assemble the array elements in Reverse order.");
+const org = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ,10];
+console.log("original Array :",org)
+
+const r = org.reverse();
+console.log("Reversed Array :",r);
+
+const N = [1 , 2 , 3 , 4 ,5 ,6 ] 
+console.log("Before Reverse :" , n);
+n.reverse();
+console.log("After Reverse :",n);
+
+//Array Element With Length Property
+const X = { 0:10 , 1:20 , 2:30 , 3:40, length:4};
+console.log("original array:",X);
+
+Array.prototype.reverse.call(X);
+console.log("after reverse with prototype:",X);
+
+
+console.log("****************************************************");
+console.log("push()");
+
+console.log("The push() function performs to add the new element to Array and display it new length of the array and it display the new array element.")
+
+const p1 = [10 , 20 , 30 , 40 , 50 ]
+console.log("length of the Array :",p1.push(6,7,8,9))
+console.log("Array Elements :",p1)
+
+const p2 = [1 , 2 , 3 , 4 ,5 ,6 ] 
+p2.push(70,80,90,100);
+console.log("Array Elements",p2);
+
+console.log("We can also push() the string elements");
+p2.push("mongoDB" , "Express" , "React" , "node");
+console.log("After push string elements",p2);
+
+console.log("We can also push the another array elements to any existing array");
+console.log("Here below , we can use two array and push the second array into first array");
+tech1 = [ "C" , "C++" , "Java" , "python"];
+tech2 = ["Javascript" , "C#" , "mojo" , "Go"];
+console.log("tech1",tech1);
+console.log("tech2",tech2);
+console.log("we can push the tech2 into tech 1 but it display like a nested array , If we like to display a continuous string we need to use spread(...) operator  ");
+
+tech1.push(tech2);
+console.log("After push tech2 into tech1 without use spread(...) operator",tech1);
+tech1.push(...tech2);
+console.log("After push tech2 into tech1 with use spread(...) operator :",tech1);
+console.log("We can merge the two array we will use this logic(spread operator ...) for push()");
+
+console.log("****************************************************");
+console.log("pop()");
+console.log("The pop() function performs to remove the  elements one by one of Array from last index and print the removed array and also print the balance array elements. The example program is in below");
+const tech3 =["c" , "c++" , "java" , "python" , "javascript" , "c#" , "mongoDB" , "mySql"];
+console.log("popped(removed) Element :",tech3.pop());
+console.log("After pop():",tech3);
+
+console.log("popped(removed) Element 2nd Time:",tech3.pop());
+console.log("After pop() 2nd Time :",tech3);
+
+console.log("popped(removed) Element 3rd Time:",tech3.pop());
+console.log("After pop() 3rd Time :",tech3);
+
+console.log("popped(removed) Element 4th Time:",tech3.pop());
+console.log("After pop() 4th Time :",tech3);
+
+console.log("****************************************************");
+console.log("shift()");
+console.log("The shift() performs like a pop() function , but pop() removes the last element of array , whereas the shift() removes the first index element of array.")
+
+const tech4 =["c" , "c++" , "java" , "python" , "javascript" , "c#" , "mongoDB" , "mySql"];
+console.log("original Array :",tech4);
+console.log("shifted(removed) element :",tech4.shift());
+console.log("After shift() :", tech4);
+
+console.log("shifted(removed) element 2nd time:",tech4.shift());
+console.log("After shift() 2nd time :", tech4);
+
+console.log("shifted(removed) element 3rd time:",tech4.shift());
+console.log("After shift() 3rd time :", tech4);
+
+console.log("shifted(removed) element 3th time:",tech4.shift());
+console.log("After shift() 3th time :", tech4);
+
+
+console.log("****************************************************");
+console.log("unshift()");
+console.log("The unshift() function is like a push() function.It performs to add the element in first index, push() function add the new element in last index");
+
+const tech5 =["c" , "c++" , "java" , "python" , "javascript" , "c#" , "mongoDB" , "mySql"];
+console.log("original array :",tech5);
+
+console.log("length of the array After unshift(Add) :", tech5.unshift("React" , "node" , "Express"));
+console.log("After unshift(add) elements",tech5);
+
+console.log("length of the array After unshift(Add) 2nd time:", tech5.unshift("Bootstrap" , "Tailwind" , "Typescript"));
+console.log("After unshift(add) elements 2nd time",tech5);
+
+console.log("length of the array After unshift(Add) 3rd time:", tech5.unshift("Jquery" , "PHP" , "Angular"));
+console.log("After unshift(add) elements 3rd time",tech5);
+
+console.log("****************************************************");
+console.log("indexOf()");
+console.log("The indexOf() function performs to find the index value of particular array element and also the string.");
+const tech6 =["c" , "c++" , "java" , "python" , "javascript" , "c#" , "mongoDB" , "mySql"];
+i = tech6.indexOf("javascript");
+console.log("After indexOf() :",i);
+
+console.log("We can also specify the starting index for searching the array element.");
+console.log("syntax :"+"indexOf(string,start_index)");
+
+i = tech6.indexOf("c++",3);
+console.log("After indexOf() with using starting index :",i);   
+console.log("Here the above output is -1 , because the string 'c++' is not there after the 3rd index, so it will return negative value(-1)");
+
+i = tech6.indexOf("mongoDB",4);
+console.log("After indexOf() with using starting index :",i);   
+console.log("Here the above output is 6 , because the string 'mongoDB' is  there after the 4td index, so it will return the value(6)");
+console.log("suppose , If we give the element which is absent in the array, the output will -1  ");
+
+i = tech6.indexOf("Assembly Language");
+console.log("After indexOf() [Giving Element is Absent] :",i); 
+
+console.log("Here above , the giving element is absent in the array so it will return the output as -1");
+const myname="sanjay";
+console.log("after indexOf() string :",myname.indexOf("j"))
+
+console.log("****************************************************");
+console.log("lastIndexOf()");
+console.log("The lastIndexOf() function is perform to search the Corresponding array element in last occurrence.");
+console.log("Note : It will not check from last index , It will check from First index Although It gives the high preference to last index");
+
+const tech7 =["c" , "mongoDB" , "java" , "python" , "javascript" , "c#" , "mongoDB" , "mySql"];
+i = tech7.lastIndexOf("mongoDB");
+console.log("Before lastIndexOf() : ",tech7);
+console.log("After lastIndexOf() : ",i)
+
+
+myname1 ="Sanjay Ravichandran"
+console.log("After lastIndexOf() string :",myname1.lastIndexOf("a"));
+console.log("We can use both indexOf() and lastIndexOf() in array and also string");
+
+console.log("****************************************************");
+console.log("every() & some()");
+console.log("The every() function performs like AND gate, which means In the Array all the elements are satisfies the particular condition ,It will Execute the result as true,otherwise false")
+console.log("The some() function performs like OR gate, which means In the Array if one of the element is satisfy the condition, It will Execute the result as true,otherwise false")
+console.log("The every() and some() both are executes the boolean[true/false] result")
+console.log("We can use the every() and some() function in many places like node.js , react.js and some conditions")
+
+console.log("_____________________________________________________");
+console.log("every()");
+
+const number1 = [  2  , 4 , 6 , 8 ,10]
+const result = number1.every((value)=>{
+    return value%2==0;
+})
+console.log(number1);
+console.log("After every() check all are even:",result);
+
+
+const number2 = [  2  , 4 , 6 , 8 ,10 , 13 , 15]
+const result2 = number2.every((value)=>{
+    return value%2==0;
+})
+console.log(number2);
+console.log("After every() check all are even:",result2);
+
+console.log("_____________________________________________________");
+console.log("some()");
+
+const number3 = [  2  , 3 , 5 , 7 ,9]
+const result3 = number3.some((value)=>{
+    return value%2==0;
+})
+console.log(number3);
+console.log("Here above 2 is even so print true")
+console.log("After some() check all are even:",result3);
+
+
+const number4 = [  2  , 4 , 5 , 7 ,9 , 11 , 13]
+const result4 = number4.some((value)=>{
+    return value%2==0;
+})
+console.log(number4);
+console.log("Here above 2 and 4 is even so print true")
+console.log("After some() check all are even:",result4);
+
+const number5 = [  1  , 3 , 5 , 7 ,9 , 11 , 13]
+const result5 = number5.some((value)=>{
+    return value%2==0;
+})
+
+console.log(number5);
+console.log("Here no one is even so print false")
+console.log("After some() check all are even:",result5);
+
+
+function checkEven(value){
+    return value % 2 ==0;
+}
+
+const result6=number5.every(checkEven);
+console.log(number5);
+console.log("After every() with normal function :",result6);
+
+console.log(number1);
+const result7 = number1.every(checkEven);
+console.log("After every() with normal function :",result7);
+
+console.log(number4);
+const result8=number4.some(checkEven);
+console.log("After some() with normal function :",result8);
+
+console.log(number5);
+const result9=number5.some(checkEven);
+console.log("After some() with normal function :",result9);
+
+
+console.log(" In every() function If all the elements are satisfy It becomes true");
+console.log("In some() function If Any one of the element is satisfy It become true");
+
+console.log("****************************************************");
+console.log("filter & find()");
+
+const items = [
+    {id:1 , item:"mobile" , cost : "12000"},
+    {id:2 , item:"Tab" , cost : "15000"},
+    {id:3 , item:"laptop" , cost : "50000"},
+    {id:4 , item:"mouse" , cost : "10000"},
+    {id:5 , item:"speaker" , cost : "5000"},
+
+];
+
+const affordfilter = items.filter( function (value) {
+    return value.cost<30000;
+})
+
+const affordfind = items.find( function (value) {
+    return value.cost<30000;
+})
+
+const affordfindIndex = items.findIndex( function (value) {
+    return value.cost<30000;
+})
+
+const affordfindLast = items.findLast( function (value) {
+    return value.cost<30000;
+})
+
+const affordfindLastIndex = items.findLastIndex( function (value) {
+    return value.cost<30000;
+})
+
+console.log("filter() : ",affordfilter);  //Here ,The filter() function filter all the object which is satisfies the condition in the array
+console.log("Here above ,The filter() function filter all the object which is satisfies the condition in the array");
+
+console.log("find() : ",affordfind);  //Here above ,The find() function find the first object of all the object which is satisfies the condition in the array , It returns only one object.
+console.log("Here above ,The find() function find the first object of all the object which is satisfies the condition in the array , It returns only one object.");
+ 
+console.log("findIndex() : ",affordfindIndex);   //here above , The findIndex() function find the Index value of first object of all the object which is satisfies the condition in the array, It also returns only one index value of object.
+console.log("here above , The findIndex() function find the Index value of first object of all the object which is satisfies the condition in the array, It also returns only one index value of object.")
+
+
+console.log("findLast() : ",affordfindLast);  //Here above ,The findLast() function find the Last object of all the object which is satisfies the condition in the array , It returns only one object.
+console.log("Here above ,The findLast() function find the Last object of all the object which is satisfies the condition in the array , It returns only one object.");
+ 
+console.log("findLastIndex() : ",affordfindLastIndex);   //here above , The findIndex() function find the Index value of Last object of all the object which is satisfies the condition in the array, It also returns only one index value of object.
+console.log("here above , The findLastIndex() function find the Index value of Last object of all the object which is satisfies the condition in the array, It also returns only one index value of object.")
+
+
+console.log("****************************************************");
+console.log("Array.from()");
+
+product="Laptop";
+output = Array.from(product)
+console.log(output);//Array.from() function is perform to convert the string into Array , If It is already in the Array form, It displays same Array not string .
+console.log("Array.from() function is perform to convert the string into Array , If It is already in the Array form, It displays same Array not string . ");
+
+
+
+console.log("****************************************************");
+console.log("Array.isArray");
+const fruits = ["apple" , "orange" , "banana" , "strawberry" , "watermelon" , "papaya"]
+const OUTPUT =Array.isArray(fruits);
+console.log("Array or Not( returns true or false) :" , OUTPUT);
+console.log("here above , the output is true , because the variable fruits consist of an Array.")
+
+
+
+console.log("****************************************************");
+console.log("flat()");
+const Tech = [[1,2],[3,4],[5,6],["html","css","JS","react","node"],["AI","ML","DL",]];
+const TechOutput = Tech.flat();
+console.log(TechOutput);
+console.log("Here above , the output is in the form of array not a nested array.")
+console.log("The flat() function is used to convert the nested array or subArray into single array.")
+
+
+console.log("****************************************************");
+console.log("reduce()");
+console.log("The reduce() function performs to reduce the array element and display the single element by using some logic like addtions such that.")
+console.log("for example , [1,2,3,4,5] then the process is 1+2=3 , 3+3=6 , 6+4=10, 10+5=15  , so the output is 15 for the logic of addition only.")
+
+const arr_val= [1,2,3,4,5];
+
+ const Result = arr_val.reduce(function(previousval,currentval){
+   //Logic
+   console.log("previous value :",previousval) ;
+   console.log("current value",currentval);
+
+   return previousval + currentval;
+}); 
+
+console.log("Array Result for reduce() :",Result);  //Here above , The output is 15 because In the array the previous value and current value are added and store into the previous value , So the final output is 15.
+
+console.log("Here above , The output is 15 because In the array the previous value and current value are added and store into the previous value , So the final output is 15");
+
+console.log("******************************************************************ARRAY COMPLETED ****************************************************");
+
+</script>  
+</body>
+</html>

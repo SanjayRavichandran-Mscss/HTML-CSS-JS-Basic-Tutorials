@@ -1,0 +1,56 @@
+.container{
+width:auto;
+height:10cm;
+background-color:skyblue;
+}
+
+
+@-webkit-keyframes slide_animation{
+ /*0%{right:5cm;}
+    1%{right:0cm;}
+    5%{right:2cm;}
+    10%{right:3cm;}
+    20%{right:4cm;}
+    30%{right:5cm;}
+    40%{right:5cm;}
+    50%{right:4cm;}
+    60%{right:3cm;}
+    70%{right:2cm;}
+    80%{right:1cm;}
+    90%{right:0cm;}
+    95%{right:0cm;}  
+    100%{right:0cm;}  */
+
+1%{left:3cm;}
+25%{left:6cm;}
+50%{left:8cm;}
+75%{left:4cm;}
+100%{left:10cm;}
+}
+
+
+.container .slideblk {
+
+    width:20cm;
+    margin-top:1cm;
+    margin-left:5cm;
+    height:7cm;
+    position:relative;
+    display:flex;
+   flex-direction: row;
+ 
+-webkit-animation-name:slide_animation;
+    -webkit-animation-duration:3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+
+}
+
+.container .slideblk .blk{
+
+height:6cm;
+width:12cm;
+margin:20px;
+}
+

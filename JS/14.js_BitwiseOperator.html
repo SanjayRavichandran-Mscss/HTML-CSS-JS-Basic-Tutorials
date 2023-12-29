@@ -1,0 +1,484 @@
+<html>
+<head>
+
+<title>JS-14</title>
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+ul{
+color:blue;
+font-size:25px;
+}
+
+ul li{
+margin:10px;
+}
+
+#bit{
+color:darkblue;
+margin-left:10px;
+}
+
+h2{
+color:green;
+
+}
+
+h3{
+color:purple;
+font-size:25px;
+text-align:center;
+}
+
+p{
+color:green;
+font-size:25px;
+}
+
+table{
+
+border:3px solid black;
+border-collapse:collapse;
+border-color:green;
+background-color:lightgreen;
+padding:10px;
+text-align:center;
+margin-left:16cm;
+font-size:30px;
+}
+
+
+th,td{
+border:3px solid black;
+
+}
+
+#BWAND{
+color:white;
+background-color:black;
+font-size:25px;
+margin:1cm;
+padding:2cm;
+border:3px solid green;
+
+}
+
+
+#output{
+color:green;
+}
+
+#comment{
+color:yellow;
+
+}
+
+#BWOR{
+color:white;
+background-color:black;
+font-size:25px;
+margin:1cm;
+padding:2cm;
+border:3px solid green;
+}
+
+#BWNOT{
+color:white;
+background-color:black;
+font-size:25px;
+margin:1cm;
+padding:2cm;
+border:3px solid green;
+}
+
+#BWXOR{
+color:white;
+background-color:black;
+font-size:25px;
+margin:1cm;
+padding:2cm;
+border:3px solid green;
+}
+
+#BWLS{
+color:white;
+background-color:black;
+font-size:25px;
+margin:1cm;
+padding:2cm;
+border:3px solid green;
+}
+
+#BWRS{
+color:white;
+background-color:black;
+font-size:25px;
+margin:1cm;
+padding:2cm;
+border:3px solid green;
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+<h1>BITWISE OPERATOR</h1>
+<h2>Bitwise operators are operators that manipulate individual bits of integers or binary numbers. They perform operations at the bit level, meaning they operate on the binary representation of the numbers.
+
+</h2>
+<ul>
+
+<li>Bitwise AND(&) <span id="bit">Bitwise AND assignment(&=)</span></li> 
+<li>Bitwise OR(|) <span id="bit">Bitwise OR assignment(|=)</span></li>
+<li>Bitwise NOT(~)</li>
+<li>Bitwise XOR(^)<span id="bit">Bitwise XOR assignment (^=)</span></li>
+<li>Left shift(<<) <span id="bit">Left shift assignment(<<=)</span></li>
+<li>Right shift(>>)(&)<span id="bit">Right shift assignment(>>=)</span></li>
+</ul>
+
+<h3>Bitwise AND(&)</h3>
+<p> It compares the corresponding bits of two numbers and produces a new number where each bit is set to 1 only if the corresponding bits of both numbers are 1. Otherwise, the result bit is set to 0.</p>
+
+<table>
+<tr>
+
+<th>Bit A</th>
+
+<th>Bit B</th>
+
+<th>Bitwise AND</th>
+
+</tr>
+
+<tr>
+
+<td>0</td>
+
+<td>0</td>
+
+<td>0</td>
+
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+
+<td>0</td>
+
+
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>0</td>
+
+
+<td>0</td>
+
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>1</td>
+
+<td>1</td>
+
+</tr>
+
+</table>
+
+<div id="BWAND">
+var a=2;             <span id="comment">  //2=0010 </span>  <br>
+var b=4;              <span id="comment">    //4=0100 </span><br>
+                             <span id="comment"> // Here, check both the binary value of 2 and 3. In the binary values,both the values are 1(true) the output will be 1(true) otherwise false. </span><br>
+console.log(a&b);  <span id="comment">  //  0000  =0 </span><br>
+                          <span id="output">  OUTPUT:0;   </span><br>
+
+
+a&=b;<br>
+console.log(a);     <span id="output"> OUTPUT:0</span><br>
+
+</div>
+
+<!-- OR operatror -->
+
+<h3>Bitwise OR(|)</h3>
+
+<p>Here,we check both the binary value(input) of 3 and 8, In the OR operator, Any one of the binary bit or value is true, the output will be true,otherwise the output will be 0</p>
+
+<table>
+<tr>
+
+<th>Bit A</th>
+
+<th>Bit B</th>
+
+<th>Bitwise OR</th>
+
+</tr>
+
+<tr>
+
+<td>0</td>
+
+<td>0</td>
+
+<td>0</td>
+
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+
+<td>1</td>
+
+
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>0</td>
+
+
+<td>1</td>
+
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>1</td>
+
+<td>1</td>
+
+</tr>
+
+</table>
+
+
+<div id="BWOR">
+
+
+var a=3;      <span id="comment">   //0011 </span>      <br>
+var b=8       <span id="comment">   //1000 </span>      <br>
+		    <span id="comment"> //Here,we check both the binary value(input) of 3 and 8, In the OR operator, Any one of the binary bit or value is true, the output will be true,otherwise the output will be 0 </span>     <br> 
+console.log("OR operator",a|b);    <span id="comment">//1011    </span>       <span id="output">OUTPUT:11</span> <br>
+                          
+
+a|=b ; //a=a|b <br>
+console.log("OR assignment:",a);     <span id="output">OUTPUT:11</span> <br>
+
+</div>
+
+
+<h3>Bitwise NOT(~)</h3>
+
+<div id="BWNOT">
+a=25;        <span id="comment">   //~a=-a-1  =  -25-1 = -26 </span>  <br>
+<h2>~a=-25-1</h2>
+console.log(~a);    <span id="output">OUTPUT:-26</span>
+</div>
+
+
+<h3>Bitwise XOR(^)</h3>
+
+<p>Here,we check both the binary value(input) of 2 and 3, In the XOR operator, The both values are opposite,the output will be one(1),otherwise zero (0).</p>
+
+
+<table>
+<tr>
+
+<th>Bit A</th>
+
+<th>Bit B</th>
+
+<th>Bitwise XOR</th>
+
+</tr>
+
+<tr>
+
+<td>0</td>
+
+<td>0</td>
+
+<td>0</td>
+
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+
+<td>1</td>
+
+
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>0</td>
+
+
+<td>1</td>
+
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>1</td>
+
+<td>0</td>
+
+</tr>
+
+</table>
+
+<div id="BWXOR">
+
+a=2;     <span id=""comment">  //binary value is 10  </span><br>
+b=3;	  <span id=""comment">   //binary value is 11 </span> <br>
+console.log("XOR operator:",a^b);      <span id="output">OUTPUT:1</span>   <br><br>
+
+a^=b;    <span id=""comment"> //a=a^b<br>
+console.log("XOR assignment :",a);  <span id="output">OUTPUT:1</span> <br>
+</div>
+
+<h3>Bitwise LEFT SHIFT(<<)</h3>
+
+<p>Bitwise left shift,It shift the bits on left side of corresponding value given in the right side of the symbol&lt&lt.</p>
+
+
+<div id="BWLS">
+
+a=5;       <span id="comment">   //5=0110 --->  8 bit Representation --->  0000 0110  </span> <br>
+b=2;        <span id="comment">   // 2---->After shifting the above binary digits.--->  00 011000 ,The decimal value of this binary value is 20. </span> <br>
+console.log("left shift :",a&lt&ltb);    <span id="output">OUTPUT : 20</span> <br>
+
+a<<=b <span id="comment">//a=a&lt&ltb</span> <br>
+console.log("left shift assignment :",a);  <span id="output">OUTPUT : 20</span> <br>
+</div>
+
+<h3>Bitwise RIGHT SHIFT(>>)</h3>
+
+<p>Bitwise Right shift,It shift the bits on Right side of corresponding value given in the Right side of the symbol&gt&gt.</p>
+
+
+
+<div id="BWRS">
+
+a=5;       <span id="comment">   //5=0110 --->  8 bit Representation --->  0000 0110  </span>   <br>
+b=2;       <span id="comment">   // 2---->After Right shifting the above binary digits.---> 000000 01,The decimal value of this binary value is 1.  <span>  <br>
+
+console.log("Right shift :",a>>b);  <span id="output">OUTPUT : 1</span> <br>  <br><br>
+
+
+a>>=b;  <span id="comment"> //a=a>>b; </span>  <br>
+console.log("Right shift assignment :",a);   <span id="output">OUTPUT : 1</span> <br>
+
+</div>
+
+
+
+
+
+<script>
+
+//Bitwise AND(&)
+
+var a=2;                  //2=0010
+var b=4;                 //4=0100
+                             // Here,we check both the binary value(input) of 2 and 4. In the AND operator ,both the binary bit values are 1(true) the output will be 1(true) otherwise false.
+console.log("AND operator",a&b);   //  0000  =0
+                            //OUTPUT:0;
+
+
+a&=b;  //a=a&b
+console.log("AND assignment:",a);     //OUTPUT:0
+
+
+//Bitwise OR(|)
+
+var a=3;         //0011     
+var b=8          //1000
+		     //Here,we check both the binary value(input) of 3 and 8, In the OR operator, Any one of the binary bit or value is true, the output will be true,otherwise the output will be 0
+console.log("OR operator",a|b);    //1011     //OUTPUT:11
+                          
+
+a|=b ; //a=a|b
+console.log("OR assignment:",a);
+
+//Bitwise NOT(~)
+
+a=25;           //~a=-a-1  =  -25-1 = -26
+console.log(~a);
+
+//BITWISE XOR(^)
+
+a=2;       //binary value is 10
+b=3;	     //binary value is 11
+console.log("XOR operator:",a^b);     
+
+a^=b;     //a=a^b
+console.log("XOR assignment :",a);
+
+
+//BITWISE LEFT SHIFT(<<)
+
+a=5;          //5=0110 --->  8 bit Representation --->  0000 0110
+b=2;         // 2---->After left shifting the above binary digits.--->  00 011000 ,The decimal value of this binary value is 20.
+
+console.log("left shift :",a<<b);
+
+a<<=b;  //a=a<<b; 
+console.log("left shift assignment :",a);
+
+//BITWISE RIGHT SHIFT (>>)
+
+a=5;          //5=0110 --->  8 bit Representation --->  0000 0110
+b=2;         // 2---->After Right shifting the above binary digits.---> 000000 01,The decimal value of this binary value is 1.
+
+console.log("Right shift :",a>>b);
+
+a>>=b;  //a=a>>b; 
+console.log("Right shift assignment :",a);
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+
+</html>

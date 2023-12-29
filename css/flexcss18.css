@@ -1,0 +1,326 @@
+h1{
+    text-align:center;
+    font-size:1cm;
+    color:green;
+}
+
+h2{
+    color:darkmagenta;
+    font-size:30px;
+}
+
+h2 span{
+    color:blue
+}
+
+span{
+    color:darkblue;
+    font-size:30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.mainblock1{
+display:flex;
+
+}
+.flx1{  
+    
+    width:1.5cm;
+    height:1.5cm;
+    margin:0.5cm;
+    background-color:orange;
+    color:red;
+}
+
+.flx2{
+    display:flex;
+    flex-direction:row;
+   width:1.5cm;
+   height:1.5cm;
+   margin:0.5cm;
+    background-color:aquamarine;
+    align-content:flex-end;
+ 
+}
+
+.flx3
+{
+background-color:blanchedalmond;
+height:4cm;
+width:2cm;
+margin:0.5cm;
+display:flex;
+    flex-direction:row;
+}
+
+.flx4
+{
+background-color:blanchedalmond;
+height:4cm;
+width:2cm;
+margin:0.5cm;
+}
+
+.flx5
+{
+background-color:blanchedalmond;
+height:4cm;
+width:2cm;
+margin:0.5cm;
+}
+
+.flx6
+{
+background-color:blanchedalmond;
+height:4cm;
+width:2cm;
+margin:0.5cm;
+}
+
+.flx7
+{
+background-color:blanchedalmond;
+height:4cm;
+width:2cm;
+margin:0.5cm;
+}
+
+.flx8
+{
+background-color:blanchedalmond;
+height:4cm;
+width:2cm;
+margin:0.5cm;
+}
+
+
+
+p{
+    font-size:40px;
+    color:blueviolet;
+}
+
+
+.mainblock2{
+    display:flex;
+    flex-direction:row;
+}
+
+
+.mainblock3{
+        display:flex;
+        flex-direction:column;
+}
+
+
+.mainblock4{
+
+    display:flex;
+    flex-direction:row-reverse;
+   
+}
+
+.mainblock5{
+
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+.mainblock6{
+    border:3px solid black;
+    width:8cm;
+     background-color:gray;
+    display:flex;
+   flex-wrap:wrap;
+}
+
+.mainblock7{
+    border:3px solid black;
+    width:8cm;
+     background-color:gray;
+    display:flex;
+   flex-wrap:wrap-reverse;
+}
+
+.mainblock8{
+    border:3px solid black;
+    width:8cm;
+     background-color:gray;
+    display:flex;
+   flex-wrap:nowrap;
+}
+
+.mainblock9{
+    border:3px solid black;
+    flex-direction:row-reverse;
+     background-color:gray;
+    display:flex;
+ justify-content:flex-start;
+
+}
+
+.mainblock10{
+    border:3px solid black;
+    flex-direction:row-reverse;
+     background-color:gray;
+    display:flex;
+ justify-content:flex-end;
+
+}
+
+.mainblock11{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+ justify-content:flex-start;
+
+}
+
+.mainblock12{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+ justify-content:flex-end;
+
+}
+
+.mainblock13{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+ justify-content:space-between;
+
+}
+
+.mainblock14{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+ justify-content:space-around;
+
+}
+
+.mainblock15{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+   justify-content:center;
+
+}
+
+.mainblock16{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    align-content:space-between;
+    
+}
+
+.mainblock17{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    align-content:space-between;
+    
+}
+
+.mainblock18{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    align-content:space-between;
+    
+}
+
+.mainblock19{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    align-content:space-between;
+    
+}
+
+.mainblock20{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    align-content:space-between;
+    
+}
+.mainblock21{
+    border:3px solid black;
+     background-color:gray;
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    align-content:space-between;
+    
+}
+
+
+
+
+.flx3:nth-child(odd)
+{
+  background-color:yellow;;
+    
+}
+
+.flx4:nth-child(even)
+{
+    background-color:skyblue;
+}
+
+.flx5:nth-child(1)
+{
+    background-color:red;   
+}
+
+.flx5:nth-child(2)
+{
+    background-color:yellow;   
+}
+
+.flx5:nth-child(3)
+{
+    background-color:green;   
+}
+
+.flx6:nth-child(1)
+{
+background-color:red;
+order:3;
+}
+
+.flx6:nth-child(2)
+{
+background-color:yellow;
+order:1;
+}
+
+
+.flx6:nth-child(3)
+{
+background-color:green;
+order:2;
+}
+
+.flx7{
+
+    flex-grow:3;
+}
+
+.flx8:nth-child(2){
+
+    flex-grow:3;
+}
+

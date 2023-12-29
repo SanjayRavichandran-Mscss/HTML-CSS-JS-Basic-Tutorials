@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>for in loop</title>
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+h3{
+color:darkgreen;
+text-align:left;
+}
+
+h2{
+color:gray;
+text-align:center;
+}
+
+#for-in
+{
+color:white;
+background-color:black;
+margin:1cm;
+padding:1cm;
+border:3px solid green;
+font-size:25px;
+}
+#com{
+color:yellow;
+}
+
+#syn{
+color:darkgreen;
+background-color:white;
+padding:5px;
+text-style:bold;
+}
+
+#out{
+color:green;
+background-color:grey;
+margin:1cm;
+padding:1cm;
+font-size:35px;
+border:5px solid green;
+}
+
+p{
+color:white;
+font-size:40px;
+
+}
+</style>
+</head>
+<body>
+<h1>for in loop</h1>
+<h2>This is for object(key : value)</h2>
+
+<div id="for-in">
+student={Roll_number : 31,name:"Sanjay.R",class:"II-msc ss",Department : "msc software system", college : "Kgcas" , city:"coimbatore"}; <br>
+console.table(student);<br>
+console.log("for in loop");<br>
+for(let stu_det in student ){<br><br>
+
+<div id="com">Here , The new or duplicate variable <mark>stu_det</mark> is present for copy & store the values of the main variable<mark>student</mark> , now we can print the keys(ie.,Roll_number , name , class , ...such that) we can use the new variable stu_det. like that we can print the values of the keys(ie., 31 , Sanjay.R , II-msc ss.....such that) We can use <mark>student[stu-det]</mark>  ---> <span id="syn"> main_variable[new_variable].</div>  <br>
+
+console.table(stu_det +"  "+":"+" " +student[stu_det]);<br>
+}<br>
+
+<div id="out">
+
+<p>OUTPUT:</p>
+
+Department: "msc software system" <br>
+Roll_number: 31<br>
+city: "coimbatore"<br>
+class: "II-msc ss"<br>
+college: "Kgcas"<br>
+name: "Sanjay.R"<br>
+<hr>
+<h3>for in loop</h3> <br><br>
+Roll_number  : 31<br>
+name  : Sanjay.R<br>
+class  : II-msc ss<br>
+Department  : msc software system<br>
+college  : Kgcas<br>
+city  : coimbatore<br>
+﻿
+
+
+</div>
+
+</div>
+
+
+<script>
+alert("Hai! welcome to JS");
+student={Roll_number : 31,name:"Sanjay.R",class:"II-msc ss",Department : "msc software system", college : "Kgcas" , city:"coimbatore"};
+console.table(student);
+console.log("_____________________________")
+console.log("for in loop");
+for(let stu_det in student ){
+
+console.table(stu_det +"  "+":"+" " +student[stu_det]);
+}
+
+</script>
+
+</body>
+
+
+
+</html>

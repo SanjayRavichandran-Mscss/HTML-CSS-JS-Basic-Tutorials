@@ -1,0 +1,44 @@
+
+
+h1
+{
+font-size:50px;
+color:red;
+border-style:inset;
+border-color:yellow;
+border-width:8px;
+text-align:center;
+margin:1px 13cm;
+}
+
+h1:hover
+{
+background-color:green;
+}
+
+.head2
+{
+font-style:times;
+font-size:50px;
+color:violet;
+}
+
+ul
+{
+color:blue;
+margin:2px 31cm 2px 1px;
+
+font-size:50px;
+list-style-image:url('../html images/redpnt.png');
+}
+
+
+ol
+{
+color:blue;
+margin:2px 16cm 2px 1px;
+background-color:white;
+font-size:50px;
+list-style-image:url('../html images/fire.jpg');
+}
+

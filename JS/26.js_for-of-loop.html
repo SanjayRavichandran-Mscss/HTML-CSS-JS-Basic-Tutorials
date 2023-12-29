@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>for of loop</title>
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+#of{
+color:white;
+background-color:black;
+margin:1cm;
+padding:1cm;
+border:3px solid green;
+font-size:30px;
+}
+
+#com{
+color:yellow;
+font-size:25px;
+}
+
+#out{
+color:green;
+font-size:35px;
+margin:1cm;
+padding:1cm;
+
+}
+
+
+</style>
+</head>
+<body>
+<h1>for of loop</h1>
+
+<div id="of">
+
+let country = ["India" , "America" , "Africa" , "Australia" , "japan"];  <br><br>
+<span id="com">//Here,We can print the array values without find the length of the array.<br> </span>
+
+for(let cont of country){  <span id="com">// Here,The cont is a duplicate variable, The original array variable is share its values to the duplicate variable <mark>const</mark><br> </span>
+ 
+console.log(cont);<span id="com">//Then , Print the array values using the duplicate variable <mark>cont</mark> <br> </span>
+ <br>
+}<br>
+
+<div id="out">
+OUTPUT:  <br>
+ India <br>
+ America<br>
+ Africa<br>
+ Australia<br>
+ japan<br>
+
+</div>
+
+
+</div>
+
+
+<script>
+alert("hii!, welcome to JS");
+
+let country = ["India" , "America" , "Africa" , "Australia" , "japan"];  
+//Here,We can print the array values without find the length of the array.
+
+for(let cont of country){
+console.log(cont);
+}
+
+
+
+</script>
+
+</body>
+</html>

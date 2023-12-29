@@ -1,0 +1,144 @@
+<html>
+<head>
+
+<title> variable</title>
+
+<style>
+
+h1{
+
+color:red;
+text-align:center;
+}
+
+h2{
+
+color:orange;
+text-align:center;
+}
+
+
+h3{
+color:darkgreen;
+text-align:center;
+font-size:30px;
+
+}
+
+ul{
+color:blue;
+font-size:30px;
+
+}
+
+dl{
+font-size:30px;
+}
+
+dt{
+font-size:40px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<h1>JAVASCRIPT-2</h1> 
+<h2>variable declaration</h2>
+
+<dl>
+
+<dt><b><i>var </i></b></dt>
+<dd>SCOPE:- It perform both locally and globally.</dd>
+<dd>VARIABLE REDECLARATION:-  It allows Redeclaration the values to variable</dd>
+<dd>VALUE ASSIGNMENT:- It allows re-assignment [Assignment means,assign the value to variable after first-declaration,without using keyword(var,let,const)]</dd>
+
+
+<dt><b><i>let</i> </b><dt/>
+<dd>SCOPE:- It perform only within a block(locally).</dd>
+<dd>VARIABLE REDECLARATION:- It does not allow Redeclaration the values to variable,which means it is constant,not to be changed.</dd>
+<dd>VALUE ASSIGNMENT:- This also allow re-assignment</dd>
+
+<dt><b><i>const</i> </b></dt>
+<dd>SCOPE:- It also perform only within a block(locally).</dd>
+<dd>VARIABLE REDECLARATION:- It is similar to the 'let' keyword, It is also not allow the Redeclaration the values to variable,which means,it is constant.</dd>
+<dd>VALUE ASSIGNMENT:- 'const' does not allow re-assignment ,But in the object i.e,(key:value) can assign the value.</dd>
+</dl>
+
+<h3>Open console tab to see result.</h3>
+<h3>Any Doubt ,open the source code page .</h3>
+
+
+<script>
+
+
+alert("welcome to JS");
+
+ x=60000000;
+console.log(x);
+
+
+var a=20;
+console.log(a);
+var a=50;
+console.log(a);       /*   output :  20 50   */         
+
+/* let b=50;
+console.log(b);
+let b=70;
+console.log(b);        output : ERROR                 */
+
+/* const c=60;
+console.log(c);
+const c=65;
+console.log(c);         output : ERROR                 */
+
+ var d=85;
+console.log(d);
+d=57;
+console.log(d);       /*   output :  85 57    */          
+
+let e=35;
+console.log(e);
+e=40;
+console.log(e);    /*   output : 35 40            */
+
+
+const student={'name':"sanjay",'age':18,'college':"KGCAS",'degree':"MSC",'branch':"software system"};
+console.log(student);
+console.table(student);
+
+
+student.name="sanjay ravichandran";
+student.age=23;
+student.college="KGISL";
+console.log(student.name);
+console.log(student.age);
+console.log(student.college);
+
+console.table(student.name);
+console.table(student.age);
+console.table(student.college);
+
+
+const f=60;
+console.log(f);
+f=70;
+console.log(f);     /*     output : 80 is not assignto f,it is also error,but it is not a major error(f=80) so, the upper lines of the code is run.But ,the lower line of error(f=80) is not run. */             
+
+
+console.log(700000000);
+
+
+
+</script>
+
+
+</body>
+
+
+
+</html>

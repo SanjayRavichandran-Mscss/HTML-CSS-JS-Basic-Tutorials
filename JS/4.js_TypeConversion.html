@@ -1,0 +1,153 @@
+<html>
+
+<head>
+
+<title>TypeConversion</title>
+
+<style>
+
+h1{
+color:red;
+text-align:center;
+}
+
+h2{
+text-align:center;
+font-size:30px;
+color:blue;
+}
+
+.typcon1{
+
+margin:1cm;
+background-color:black;
+width:25cm;
+height:6cm;
+padding:1cm;
+color:white;
+}
+
+.typcon2{
+
+margin:1cm;
+background-color:black;
+width:25cm;
+height:6cm;
+padding:1cm;
+color:white;
+
+
+}
+
+
+p{
+color:white;
+font-size:30px;
+}
+
+span{
+color:lightgrey;
+}
+
+h3{
+color:yellow;
+font-style:italic;
+font-size:40px;
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<h1>TYPE CONVERSION</h2>
+
+<h2>In Javascript,Type conversion refers to the process of converting the value from one Datatype to another. Javascript is a dynamically Typed Language,which means that variable can hold values of different types.And also the type of value can be changd at Run time. </h2>
+
+<div class="typcon1">
+<p>let a=25;<br><mark> a=String(a);     </mark>     <span> /* It can be convert from number to string    */   </span> <br>
+console.log(a,typeof a);     <span>      /*output :  25 string  */        </span>     </p>
+
+<h3>This is one of the method to convert the Data type.</h3>
+</div>
+
+
+
+<div class="typcon2">    
+<p>let a=50;       <br>
+console.log(a,typeof a);   <span>  /* output:50 'number'*/     </span>  <br>
+<mark>a=a.toString(); </mark>             <span>   /*  This line convert from number to string   */    </span>     <br>
+console.log(a,typeof a);    <span> /*  output: 50 string   */  </span>    </p>
+
+
+<h3>This is Another method to convert the Data type.</h3>
+</div>
+
+
+<script>
+
+alert("Hai,welcome to JS");
+
+
+
+let a=25;
+console.log(a,typeof a);    /* output: 25  'number'  */
+
+ a=String(a);       /* It can be convert from number to string    */
+console.log(a,typeof a);    /*output :  25 string  */   
+   
+
+let b=23.6;
+console.log(b,typeof b);    /* output: 23.6 'number'  */
+
+b=String(b);
+console.log(b,typeof b);   /* output :23.6 string  */
+
+c=true;
+console.log(c,typeof c);    /*  output :true 'boolean'  */
+
+c=String(c);
+console.log(c,typeof c);   /* output : true string  */
+
+
+
+d=new Date();
+console.log(d);   /* output :[current date i,e Thu Jun 08 2023 08:13:43 GMT-1200 (GMT-12:00)]  */
+console.log(typeof d)  /*  output: object  */
+
+
+d=String(d);
+console.log(d);   /* output :[current date i,e Thu Jun 08 2023 08:13:43 GMT-1200 (GMT-12:00)]  */
+console.log(typeof d );/* output :string  */
+
+
+e=[1,2,3,4,5,6,7,9];
+console.log(e);   /*  output:   [1,2,3,4,5,6,7,9]   */
+console.log(typeof e);   /* output:object  */
+
+e=String(e);
+console.log(e);   /*  output:   1,2,3,4,5,6,7,9  */
+console.log(typeof e);  /* output: string */
+
+e=e.toString();
+
+console.log(e);   /*  output:   1,2,3,4,5,6,7,9  */
+
+let A=50;
+console.log(A,typeof A);     /* output:50 'number'*/
+A=A.toString();                 /*  This line convert from number to string   */
+console.log(A,typeof A);    /*  output: 50 string   */
+
+</script>
+
+</body>
+
+
+
+
+</html>
+
+

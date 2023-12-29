@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1 style="color:red;text-align: center;">Functions</h1>
+
+    <h3 style="color:blue;text-align: center;">ctrl + shift + i</h3>
+ 
+
+
+    <script>
+    console.log("Javascript Functions");
+    
+    console.log("Function with a return Statement : ")
+    //Function with a return Statement :
+
+    function add(a,b)
+    {
+        return a+b;
+    }
+console.log("function calling :",add(24,24));
+console.log("function calling :",add(45,55));
+console.log("************************************************************************************")
+
+console.log("Function with arbitrary arguments :");
+//Function with arbitrary arguments :
+function sum()
+{
+    let total=0;
+    for(let i=0;i<arguments.length;i++){
+        total+=arguments[i];
+    }
+    return total;
+}
+console.log("Arbitrary arguments :",sum(10,10,20,20,40));
+console.log("Arbitrary arguments :",sum(10,10,20,20,40,100));
+console.log("************************************************************************************")
+
+
+console.log("Function as Expression");
+//Function as Expression
+
+const Add = function(a,b){
+    return a+b;
+
+}
+
+console.log(add);
+console.log(add(25,25));
+
+console.log("************************************************************************************")
+
+
+console.log("Arrow Function :");
+// Arrow Function :
+
+//const functionName = (parameters) =>{function body};
+
+const ADD=(a,b)=>{
+    return a+b;
+};
+console.log(ADD);
+console.log(ADD(100,100));
+
+console.log("Arrow functions with map()");
+let numbers = [1,2,3,4,5,6,7,8,9];
+let doubledNumbers = numbers.map(number=>number*2);
+console.log("Original numbers :",numbers);
+console.log("Doubled numbers :",doubledNumbers);
+
+console.log("Using arrow functions with filter() :");
+let words =["apple" , "orange" , "banana" , "grape"];
+let filteredWords = words.filter(word=>word.length>5);
+console.log("original words",words);
+console.log("filtered words",filteredWords);
+
+console.log("Using arrow function with reduce()");
+
+let NUMBERS = [10,20,30,40,50];
+console.log(NUMBERS);
+let total = NUMBERS.reduce((Accumulator,NUM) =>Accumulator+NUM,0);
+console.log("Arrow function with reduce() :",total);
+
+console.log("Using arrow function to create a closure");
+
+let createCounter=() =>{
+    let count = 0;
+    return ()=>{
+        count++;
+        return count++;
+    }
+};
+let counter = createCounter();
+console.log(counter); 
+console.log(counter()); 
+console.log(counter()); 
+console.log(counter()); 
+
+
+console.log("Call back Function :");
+// Call back Function :
+function higherOrderFunction(myCallback){
+    myCallback();
+}
+
+console.log("It will print after 5 minutes...")
+setTimeout(function(){
+    console.log("we have use setTimeout() function 'vanakkam'")
+} , 5000);
+
+//In the above we have use setTimeout() function
+
+setInterval(function(){
+    console.log(" we have use setInterval() function 'welcome'")
+} , 1000);
+
+//In the above we have use setInterval() function
+
+console.log("The setTimeout function and setInterval function , we have to use many places like ecommerce such that.")
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+
+/***********          MEDIA QUERY         *******************/
+
+@media (min-width:320px){         /* mobile s*/
+    h1{
+        color:#ff0000;
+       font-size:40px;
+       text-align:center;
+    }
+}
+
+@media (min-width:375px){        /* mobile M */
+    h1{
+        color:yellow;
+       font-size:50px;
+       text-align:center;
+    }
+}
+
+@media (min-width:425px){       /* mobile  L    */
+    h1{
+        color:green;
+       font-size:60px;
+        text-align:center; 
+    }
+}
+
+@media (min-width:768px){         /* tablet     */
+    h1{
+        color:blue;
+       font-size:80px;
+       text-align:center; 
+    }
+}
+
+@media (min-width:1024px){        /*     Laptop   */
+    h1{
+        color:darkorchid;
+       font-size:120px;
+       text-align:center;
+    }
+}
+
+
+
+@media (min-width:320px){
+
+     img{
+    margin-left:2cm;
+height:200px;
+width:150px;
+
+    }
+}
+
+@media (min-width:350px){
+
+     img{
+        margin-left:2cm;
+height:250px;
+width:200px;
+
+    }
+}
+
+@media (min-width:400px){
+
+     img{
+        margin-left:3cm;
+height:300px;
+width:250px;
+
+    }
+}
+
+@media (min-width:450px){
+
+     img{
+        margin-left:3cm;
+height:350px;
+width:250px;
+
+    }
+}
+
+@media (min-width:500px){
+
+    img{
+        margin-left:3cm;
+height:400px;
+width:350px;
+
+    }
+}
+
+@media (min-width:550px){
+
+    img{
+        margin-left:4cm;
+height:450px;
+width:400px;
+
+    }
+}
+@media (min-width:600px){
+
+    img{
+        margin-left:7cm;
+    }
+}
+@media (min-width:650px){
+
+    img{
+        margin-left:8cm;
+    }
+}
+
+@media (min-width:700px){
+
+    img{
+        margin-left:9cm;
+    }
+}
+
+@media (min-width:750px){
+
+    img{
+        margin-left:10cm;
+    }
+}
+
+@media (min-width:800px){
+
+    img{
+        margin-left:11cm;
+    }
+}
+
+@media (min-width:850px){
+
+    img{
+        margin-left:12cm;
+    }
+}
+
+@media (min-width:900px){
+
+    img{
+        margin-left:13cm;
+    }
+}
+
+@media (min-width:950px){
+
+    img{
+        margin-left:14cm;
+    }
+}
+
+@media (min-width:1000px){
+
+    img{
+        margin-left:15cm;
+    }
+}
+
+@media (min-width:1050px){
+
+    img{
+        margin-left:16cm;
+    }
+}

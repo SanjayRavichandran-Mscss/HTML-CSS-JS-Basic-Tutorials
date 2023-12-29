@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Label Block</title>
+
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+#label{
+color:white;
+background-color:black;
+margin:1cm;
+padding:1cm;
+border:3px solid green;
+font-size:30px;
+}
+
+#com{
+color:yellow;
+}
+
+h2{
+color:white;
+}
+p{
+
+color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Label Block</h1>
+
+<div id="label">
+
+for(group of groups) <br>
+{<br>
+<mark>inner:</mark>  <span id="com">//Here , The inner is a label block. </span><br>
+for(member of group)<br>
+{<br>
+console.log(member);<br>
+if(member.startsWith('s'))<br>
+{<br>
+console.log("start with S :"+ " " +member);<br>
+<mark>break inner;</mark><br>
+}<br>
+}<br>
+}<br>
+
+
+<h2>OUTPUT : </h2>
+
+<p>
+ sanjay  <br>
+ start with S : sanjay<br>
+ karthi<br>
+ surya<br>
+ start with S : surya<br>
+ madhavan<br>
+ gowtham<br>
+ Antony<br>
+ shiju<br>
+ start with S : shiju<br>
+ ratheesh<br>
+ sanjeev<br>
+ start with S : sanjeev<br>
+ spikey<br>
+ start with S : spikey<br>
+
+
+</p>
+
+
+</div>
+
+
+<script>
+alert("Hii! , welcome to JS");
+
+let groups = [
+
+["sanjay" , "sam" , "Rakshan" ,"gokul" , "Bala" , "Dharsan"] ,
+
+["karthi" , "surya" , "Ram" ,"gopal" , "vijay" , "Daniel"] ,
+
+["madhavan" , "gowtham", "Antony" ,"shiju" , "shovi" , "Shantosh"] ,
+
+["ratheesh" , "sanjeev" , "sakthi" ,"kannan" , "madhan" , "kumar"] ,
+
+["spikey" , "shankar" , "Raja" ,"Anirudh" , "Rahman" , "Yuvan"] ,
+
+];
+
+
+
+for(group of groups)
+{
+inner:
+for(member of group)
+{
+console.log(member);
+if(member.startsWith('s'))
+{
+console.log("start with S :"+ " " +member);
+break inner;
+}
+}
+}
+
+</script>
+
+</body>
+
+
+</html>

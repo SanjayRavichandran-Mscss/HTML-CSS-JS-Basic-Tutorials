@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>NULLISH_COALESCING</title>
+<style>
+
+h1{
+
+color:red;
+text-align:center;
+}
+
+p{
+color:green;
+text-align:left;
+font-size:40px;
+padding:10px;
+}
+
+#null1,#null2,#null3,#null4,#null5{
+background-color:black;
+padding:1cm;
+color:white;
+font-size:25px;
+border:5px solid green;
+margin:15px 10px 15px 0cm;
+}
+
+
+
+
+#output{
+color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Nullish Coalescing Operator</h1>
+<p>The Nullish coalescing operator (??) is a feature introduced in JavaScript <br> to provide a concise way to handle nullish (null or undefined) values.<br> It allows you to provide a default value when accessing a variable or property that may be null or undefined.</p>
+
+
+<div id="null1">
+var a=null??'NO VALUE';    <br>
+console.log(a); <span id="output">  // OUTPUT : NO VALUE</span><br>
+</div>
+
+<div id="null2"> 
+var b=60??'NO VALUE';  <br>
+console.log(b);  <span id="output"> //OUTPUT: 60</span><br>
+</div>
+
+<div id="null3">
+const user={'name':'SANJAY','department':'software_system','college':'kgisl' };  <br>
+console.log(user);    <span id="output">  //OUTPUT: {name: 'SANJAY', department: 'software_system', college: 'kgisl'}</span>  <br>
+</div>
+
+<div id="null4">
+user.name??='NO_NAME';  <br>
+user.city??='NO_CITY';  <br>
+console.log(user.name); <span id="output">  //OUTPUT : SANJAY  </span>  <br>
+console.log(user.city); <span id="output">   //OUTPUT  :  NO_CITY </span>  <br>
+</div>
+
+
+<div id="null5">
+user.department??='Here, We have not mentioned the department'  <br>
+console.log(user.department);   <span id="output"> // software_system </span>
+
+
+</div>
+
+<script>
+alert("Hi!,Welcome to JS");
+
+var a=null??'NO VALUE';  
+console.log(a);    // OUTPUT : NO VALUE
+
+var b=60??'NO VALUE';
+console.log(b);   //OUTPUT: 60
+
+const user={'name':'SANJAY','department':'software_system','college':'kgisl' };
+console.log(user);      //OUTPUT: {name: 'SANJAY', department: 'software_system', college: 'kgisl'}
+
+
+user.name??='NO_NAME';
+user.city??='NO_CITY';
+console.log(user.name);   //OUTPUT : SANJAY
+console.log(user.city);   //OUTPUT  :  NO_CITY
+
+user.department??='Here, We have not mentioned the department.'
+console.log(user.department);    // software_system
+
+</script>
+
+</body>
+
+</html>

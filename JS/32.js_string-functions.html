@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>string-Functions</title>
+<style>
+
+body{
+    margin:1cm 0px 0px 3cm;
+    background-color:antiquewhite;
+}
+table{
+    margin:1cm;
+    padding:10px;
+    text-align:center;
+    font-size:20px;
+}
+tr{
+    padding:5px;
+}
+
+h1{
+color:red;
+text-align:center;
+}
+
+h2{
+color:orange;
+text-align:center;
+}
+
+h3{
+color:green;
+text-align:center;
+}
+
+
+
+</style>
+</head>
+<body>
+<h1>String-Functions</h1>
+
+
+
+<script>
+
+alert("Hii! , Welcome to JS");
+
+let first_name = "sanjay";
+let last_name = "Ravichandran";
+console.log("string-concatenation(manual)");
+let full_name = first_name+" "+last_name;
+console.log(full_name);
+console.log("string-concatenation(with the help of string-function)");
+full_name=first_name.concat(" ", last_name);
+console.log(full_name);
+
+console.log("Append");
+
+c="sanjay";
+c+=" Ravichandran";
+console.log(c);
+
+console.log("Escaping");
+
+c = 'He can\'t run';  // Here , we can use the Escaping sequence '\'
+console.log(c);
+
+console.log("String-Length");
+
+c=full_name.length;
+console.log("Length of the full_name is"+" "+c);
+
+console.log("toUpperCase");
+
+
+c=first_name.toUpperCase();    //Here , The Syntax is toUpperCase
+console.log("UpperCase of string: "+c);
+
+console.log("toLowerCase");
+
+
+c = last_name.toLowerCase();   //Here , The syntax is toLowerCase
+console.log("LowerCase of string: "+c);
+
+console.log("indexOf");
+
+
+c = first_name.indexOf('j')
+console.log("indexOf j in first_name :" + c);   //sanj --> 0 1 2 3
+
+console.log("lastIndexOf");
+
+c = last_name.lastIndexOf('a');
+console.log("lastIndexOf a in last_name :" + c);  // ravichandra  --> 0 1 2 3 4 5 6 7 8 9 10  --> It always checks from starting index.
+
+console.log("charAt()");
+
+c = first_name.charAt(2);
+console.log("charAt(2) is : "+c);    // It gives the element of given index value. Here the index value is 2 , so print n.
+
+console.log("charCodeAt()");
+
+c = last_name.charCodeAt(2);
+console.log("charCodeAt(2) is : "+ c); // It gives the ASCII code of the corresponding element of the index value.
+
+console.log("substring");
+
+c = first_name.substring(0,3);
+console.log(c);  //0 1 2-->s a n
+
+c = first_name.substring(3); // It can be print after the 3rd value of the string.
+console.log(c); 
+
+c = first_name.substring(3,0);  // (3,0) -->(0,3) It will interchange the smallest value as a from index value and largest value as the total number of values.
+console.log(c);  //0 1 2-->s a n
+
+// SUPPOSE THE INDEX VALUE IS WRONG THE OUTPUT IS EMPTY.
+
+console.log("slice");
+
+c = first_name.slice(0,3); 
+console.log(c);   
+
+// The String slice() function is also similar to the substring. But, the small variation is the slice() function is allow to slice the string with negative value(from last element) , But In the substring it can be not allowed.
+
+c = first_name.slice(-3);
+console.log(c);   // j a y --> -1 -2 -3
+
+console.log("split()");
+
+c = full_name.split(" ");   // Here , It can be split the string with the reference of any variable or comma(,) or space(" ")...etc,... , here we can use space.
+console.log(c);
+console.table(c);
+
+console.log("replace()");
+
+a = "I am from chennai";
+console.log("before replace : "+a);
+
+c = a.replace("chennai" , "coimbatore");   // Here , The first parameter is to finding string and the second parameter is to replacing the string.
+console.log("After replace : "+c);
+
+console.log("includes() Function");
+
+const pets = ["dog" , "cat" , "rat" , "lovebirds" , "parrot" , "cow"];
+console.log(pets);
+
+console.log("includes lovebirds : "+pets.includes('lovebirds'));  // Here the includes parameter value is there in the array , The output will be true , otherwise the output will be false.
+
+console.log("includes Eagle : "+pets.includes('Eagle'));   // here the output will be false because the parameter is not there in the array.
+
+console.log("trim()");
+
+a=" sanjay    ";         
+console.log("Before Trim : " +a.length);      //length=11
+a = a.trim();       // Here, the Trim() Function removes the unwanted white spaces. So , After trim() the length of string  is 6.
+console.log("After Trim : " +a.length);    //length=6
+
+//padStart    &     padEnd
+
+a="5" , b="333" , c="6" , d="7";
+a=a.padStart(4,0); // padStart(targetLength, padString): This method adds characters to the beginning of a string until it reaches the specified targetLength
+console.log(a);
+
+b=b.padEnd(7,9);   //padEnd(targetLength, padString): This method adds characters to the end of a string until it reaches the specified targetLength.
+console.log(b);
+
+c=c.padStart(10,"*");
+console.log(c);
+
+d=d.padEnd(5,"$");
+console.log(d);
+
+// Long Literal String      +   and  \  It has Separate the lines of paragraphs.
+
+let longString = "Deluge is a scripting language\ primarily used in the context of the \Zoho Creator platform.\
+Zoho Creator is a low-code application development platform \
+that allows users to create custom web and mobile applications without the need for extensive coding."+"\
+ Deluge serves as the scripting language for Zoho Creator,"+" enabling users to add custom logic and automate various tasks within their applications."
+
+console.log(longString);
+
+//fromCharCode -  It converts the ASCII code into character.   ie,.  65 --> A  ,  66 -->B.
+
+console.log("fromCharCode");
+console.log("65"+" "+"="+" "+String.fromCharCode(65));
+
+
+console.log("66"+" "+"="+" "+String.fromCharCode(66));
+
+//TEMPLATE STRING 
+
+let fname = "sanjay";
+let age = "19";
+let city = "coimbatore";
+let role ="Founder & CEO";
+
+var output ="";
+
+ 
+// method - 1
+//In this method , the calculations are little bit complicated
+// Difficulty level - HARD
+var output = "<table border='1'> <tr><th>Name</th><td>"+fname+"</td></tr> <tr><th>Age</th><td>"+age+"</td></tr><tr><th>City</th><td>"+city+"</td></tr>+<tr><th>Role</th><td>"+role+"</td></tr></table>";
+
+//  method - 2   es5
+//In this method , the calculations are little bit complicated
+// Difficulty level - MEDIUM
+output +="<table border='3'>" +
+    "<tr><th>Name</th><td>"+fname+"</td></tr>" +
+    "<tr><th>Age</th><td>"+age+"</td></tr>" +
+    "<tr><th>City</th><td>"+city+"</td></tr>"  +
+    "<tr><th>Role</th><td>"+role+"</td></tr>"+
+    "</table>"
+
+    // method - 3    es6
+        // `--> backtick
+        // In this method ,We can perform the Calculations in Easy way.
+        // Difficulty level - EASY , This method is easy to write code and also readability.
+        output +=`<table border='3'>
+    <tr><th>Name</th><td>${fname}</td></tr>
+    <tr><th>Age</th><td>${age}</td><td>${age>=18?"Eligible for Vote":"Not Eligible for Vote"}</td></tr> 
+    <tr><th>City</th><td>${city}</td></tr>
+    <tr><th>Role</th><td>${role}</td></tr>
+    </table>`
+
+    output +=`<h1>String-Functions</h1>`
+    output +=`<h2>Open console tab and see the output.</h2>`
+    output +=`<h3>The Above Tables are the String Template concept.</h3>`
+
+    output +=  `<table border='6'>
+
+      <tr><th>Summarize</th></tr>
+      <tr><td>string-concatenation</td></tr>
+      <tr><td>string-Append</td></tr>
+      <tr><td>Escaping</td></tr>
+      <tr><td>String-Length</td></tr>
+      <tr><td>toUpperCase</td></tr>
+      <tr><td>toLowerCase</td></tr>
+      <tr><td>indexOf</td></tr>
+      <tr><td>lastIndexOf</td></tr>
+      <tr><td>charAt()</td></tr>
+      <tr><td>charCodeAt()</td></tr>
+      <tr><td>substring</td></tr>
+      <tr><td>slice()</td></tr>
+      <tr><td>split()</td></tr>
+      <tr><td>replace()</td></tr>
+      <tr><td>includes()</td></tr>
+      <tr><td>trim()</td></tr>
+      <tr><td>padStart()</td></tr>
+      <tr><td>padEnd()</td></tr>
+      <tr><td>Long Literal String --> backslash & +</td></tr>
+      <tr><td>fromCharCode()</td></tr>
+      <tr><td>Template String</td></tr>
+      
+
+        </table>`
+
+document.body.innerHTML = output;
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest and Spread</title>
+</head>
+<body>
+
+    <h1 style="color:red;text-align:center">Rest parameter and spread operator </h1>
+    <h3 style="color:blue;text-align:center">ctrl + shift + i</h3>
+
+    <script>
+        console.log("Rest parameter Functions :");
+    function myFunction(first , second , ...rest){
+        console.log(first);
+        console.log(second);
+        console.log(rest);
+
+    }
+    myFunction(12,34,64,67,45,76,43,56,);
+    //Here the first two arguments like 12 and 34 only stores in the variable first and second respectively,apart from the first two values , the other values are store in the ...rest in the form of array.
+    console.log("Here the first two arguments like 12 and 34 only stores in the variable first and second respectively,apart from the first two values , the other values are store in the ...rest in the form of array.")
+    console.log("...rest operator only use in function.");
+
+    console.log("************************************************************************");
+    let myArray = [1 , 2 , 3];
+    let newArray = [...myArray,4,5,6,7,8];
+    console.log("old array",myArray);
+    console.log("new array",newArray); 
+    console.log("here , spread operator is used for adding the Extra elements in the existing array.");
+    console.log("In the existing array [1 , 2 , 3] are there , we can add the new extra elements to existing array like 4,5,6,7,8.");
+    console.log("The spread operator is mostly used in Array.")
+
+    </script>
+    
+</body>
+</html>

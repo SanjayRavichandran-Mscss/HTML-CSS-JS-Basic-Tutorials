@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>  Nested-if-statement</title>
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+#nest{
+color:white;
+background-color:black;
+font-size:30px;
+border: 5px solid green;
+margin-right:1cm;
+margin-left:1cm;
+padding:1cm;
+}
+
+#nest h2{
+color:green;
+}
+#nest p{
+margin-left:6cm;
+}
+
+#op{
+margin-left:18.5cm;
+color:green;
+border-color:green;
+font-size:30px;
+font-style:bold;
+padding:0.3cm;
+margin-bottom:0.2cm;
+border-radius:20px;
+}
+
+#op:hover{
+background-color:lightgreen;
+border-radius:20px;
+}
+
+
+</style>
+</head>
+<body>
+<h1>Nested if Statement</h1>
+<a href="#out"><button id="op" type="button">OUTPUT</button> </a>
+
+<div id="nest">
+
+mat=99,phy=98,che=99;  <br>
+total=mat+phy+che;<br>
+avg=total/3;<br><br>
+
+if(mat>=35 && phy>=35 &&  che>=35 )<br>
+{<br>
+console.log("RESULT : PASS");<br><br>
+
+if(avg>90 && avg<=100)<br>
+{<br>
+console.log("GRADE :A");<br>
+}<br><br>
+
+
+else if(avg>80 && avg<=90)<br>
+{<br>
+console.log("GRADE :B");<br>
+}<br><br>
+
+else if(avg>70 && avg<=80)<br>
+{<br>
+log("GRADE :C");<br>
+}<br>
+
+else if(avg>60 && avg<=70)<br>
+{<br>
+console.log("GRADE :D");<br>
+}<br><br>
+
+else if(avg>50 && avg<=60)<br>
+{<br>
+console.log("GRADE :E");<br>
+}<br><br>
+
+else<br>
+{<br>
+console.log("GRADE : F");<br>
+} <br><br>
+
+}<br><br>
+
+else<br>
+{<br>
+console.log("RESULT : fail");<br>
+}<br>
+
+<hr>
+
+<div id="out">
+
+<h2>OUTPUT : </h2>
+<p>Result : PASS</p>
+<p>GRADE: A</p>
+</div>
+
+</div>
+
+
+
+<script>
+
+mat=99,phy=98,che=99;
+total=mat+phy+che;
+avg=total/3;
+
+if(mat>=35 && phy>=35 &&  che>=35 )
+{
+console.log("RESULT : PASS");
+
+if(avg>90 && avg<=100)
+{
+console.log("GRADE :A");
+}
+
+
+else if(avg>80 && avg<=90)
+{
+console.log("GRADE :B");
+}
+
+else if(avg>70 && avg<=80)
+{
+log("GRADE :C");
+}
+
+else if(avg>60 && avg<=70)
+{
+console.log("GRADE :D");
+}
+
+else if(avg>50 && avg<=60)
+{
+console.log("GRADE :E");
+}
+
+else
+{
+console.log("GRADE : F");
+} 
+
+}
+
+else
+{
+console.log("RESULT : fail");
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

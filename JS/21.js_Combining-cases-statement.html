@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Combining Cases Statement</title>
+<style>
+h1{
+
+color:red;
+text-align:center;
+}
+
+#vow{
+color:white;
+background-color:black;
+font-size:30px;
+border:5px solid green;
+margin-right:5cm;
+padding:1cm;
+}
+h2{
+border: 5px solid green;
+margin:10px 18cm;
+text-align:center;
+padding:10px;
+}
+
+h2:hover
+{
+background-color:lightgreen;
+}
+
+a{
+text-decoration:none;
+color:green;
+}
+
+#out{
+font-size:35px;
+font-style:bold;
+color:green;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<h1>Combining Cases Statement</h1>
+<b><center><p>or</p></center></b>
+<h1>Group Switch</h1>
+<a href="#out"><h2>output</h2></a>
+
+<div id="vow">
+
+let vow;<br>
+vow=prompt("Enter Any Character");<br><br>
+
+switch(vow)<br>
+{<br>
+case 'a' :<br>
+case 'e' :<br>
+case  'i' :<br>
+case 'o' :<br>
+case 'u' :<br>
+case 'A' :<br>
+case 'E' :<br>
+case 'I'  :<br>
+case 'O' :<br>
+case 'U' :<br><br>
+		console.log(vow + " is an  vowel ");<br>
+		break;<br><br>
+
+
+default:<br>
+		console.log( vow +"is Not an Vowel Character");<br>
+		break;<br>
+}<br><br>
+
+<div id="out">
+<i><b>INPUT : Z  <br>
+OUTPUT :Z is Not an Vowel Character </b></i> <br>
+</div>
+
+</div>
+
+
+<script>
+alert("Hi!!,Welcome to JS!");
+
+let vow;
+vow=prompt("Enter Any Character");
+
+switch(vow)
+{
+case 'a' :
+case 'e' :
+case  'i' :
+case 'o' :
+case 'u' :
+case 'A' :
+case 'E' :
+case 'I'  :
+case 'O' :
+case 'U' :
+		console.log(vow + " is an  vowel ");
+		break;
+
+
+default:
+		console.log( vow +"is Not an Vowel Character");
+		break;
+
+}
+
+
+</script>
+
+</body>
+
+
+</html>

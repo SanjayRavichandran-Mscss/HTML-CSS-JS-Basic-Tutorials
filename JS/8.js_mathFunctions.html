@@ -1,0 +1,258 @@
+<html>
+<head>
+<title>Math-Functions</title>
+
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+.math{
+margin-left:5cm;
+color:skyblue;
+background-color:black;
+height:auto;
+width:30cm;
+font-size:35px;
+border:10px double white;
+border-radius:20px;
+padding:1cm;
+}
+
+.math h2{
+color:green;
+font-size:30px;
+}
+
+span{
+color:gray;
+font-size:30px;
+font-style:italic;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>MATH FUNCTIONS</h1>
+
+
+<div class="math">
+
+let a;  <br><br>
+
+a=Math.PI;    <br>     
+console.log(a);   <span>  //constant value=3.141592653589793 </span> <br>
+<h2>OUTPUT:3.141592653589793</h2>   <br>
+
+a=Math.E;       <br>
+console.log(a);    <span>  //value of E is 2.718281828459045 </span><br>
+<h2>OUTPUT:2.718281828459045</h2>	<br>
+
+a=Math.round(5.8);    <br>
+console.log(a);     <span>      //roundof value is 6</span>  <br>
+<h2>OUTPUT:6</h2>    <br>
+
+a=Math.round(5.2);   <br>
+console.log(a);     <span>   //roundof value is 5   </span> <br>
+<h2>OUTPUT:5</h2>   <br>
+
+
+a=Math.floor(3.908389);   <br>
+console.log(a);    <span>   //floor is round a number down to the nearest integer.</span><br>
+<h2>OUTPUT:3</h2>    <br>
+
+a=Math.ceil(7.2313483);<br>
+console.log(a);  <span>   //ceil is round a number up to the nearest integer.</span><br>
+<h2>OUTPUT:8</h2>   <br>
+
+a=Math.sqrt(81);   <br>
+console.log(a);   <span>  //square root of given value </span> <br>
+<h2>OUTPUT:9</h2>  <br>
+
+a=Math.abs(-20);   <br>
+console.log(a); <span>  // It convert the negative value into positive value,which is known as absolute value.  </span> <br>
+<h2>OUTPUT:20</h2>   <br>
+
+a=Math.trunc(40.8472397);   <br>
+console.log(a);  <span> // It Truncate(removes) the decimal values. </span> <br>
+<h2>OUTPUT:40</h2>  <br>
+
+a=Math.pow(5,2);<br>
+console.log(a);  <span>  // It is used to find the power of given value,Here,(5,2) becomes (Base,power)</span><br>
+<h2>OUTPUT:25</h2><br>
+
+a=Math.min(64,10,30,44,90,12,5,89,34,97,25,91);<br>
+console.log(a);   <span>  //This function is Used to find the minimum value of the given Numbers.</span><br>
+<h2>OUTPUT:5</h2><br>
+
+a=Math.max(64,10,30,44,90,12,8,89,34,97,25,91);<br>
+console.log(a);  <span>    //This function is Used to find the maximum value of the given Numbers.</span><br>
+<h2>OUTPUT:97</h2><br>
+
+a=Math.random();<br>
+console.log(a);  <span>  //This function is generates the random value for each refresh.</span><br>
+<h2>OUTPUT:0.5513701718270279<span>//[This is random number,so It is temporary and it can be change while refresh]</span></h2><br>
+
+a=Math.random()*50+1;<br>
+console.log(a);   <span>  // This also generates the random value,But it have the limit that is (1 to 50) .</span><br>
+<h2>OUTPUT:45.14043461865074<span>//[This is random number,so It is temporary and it can be change while refresh]</span></h2><br>
+
+a=Math.floor((Math.random()*50+1));<br>
+console.log(a);   <span>   // This also generates the random value,But it have the limit that is (1 to 50). And, It is also generate only the Integer,not a decimal.</span><br>
+<h2>OUTPUT:43<span>//[This is random number,so It is temporary and it can be change while refresh]</span></h2><br>
+
+a=Math.sign(22);<br>
+console.log(a);    <span>   // This function find the given value is positive or negative or zero.The Result is 1.</span><br>
+<h2>OUTPUT:1</h2><br>
+
+a=Math.sign(-42);<br>
+console.log(a);   <span>   // This function find the given value is positive or negative or zero.The Result is -1.</span><br>
+<h2>OUTPUT:-1</h2><br>
+
+
+a=Math.sign(0);   <br>
+console.log(a);   <span>  // This function find the given value is positive or negative or zero.The Result is 0.</span><br>
+<h2>OUTPUT:0</h2>  <br>
+
+
+a=Math.sin(45);  <br>
+console.log(a);   <span>   //This function find the value of sin Tita.</span>  <br>
+<h2>OUTPUT:0.8509035245341184</h2>  <br>
+
+a=Math.cos(45);   <br>
+console.log(a);  <span> //This function find the value of cos Tita.</span>  <br>
+<h2>OUTPUT:0.5253219888177297</h2>   <br>
+
+a=Math.tan(45);    <br>
+console.log(a);  <span>     //This function find the value of tan Tita.</span>   <br>
+<h2>OUTPUT:1.6197751905438615</h2>   <br>
+
+a=Math.log(90);   <br>
+console.log(a); <span>	//This function find the value of log.  </span><br>
+<h2>OUTPUT:4.499809670330265</h2>  <br>
+
+a=Math.log2(90);   <br>
+console.log(a); <span>	//This function find the value of log2.  </span> <br>
+<h2>OUTPUT:6.491853096329675</h2>   <br>
+
+a=Math.log10(90);   <br>
+console.log(a);	 <span>	//This function find the value of log10.  </span> <br>
+<h2>OUTPUT:1.9542425094393248</h2>    <br>
+
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+let a;
+
+alert("Hai! welcome to JS");
+
+a=Math.PI;        
+console.log(a);    //constant value=3.141592653589793
+
+a=Math.E;       
+console.log(a);     //value of E is 2.718281828459045
+
+a=Math.round(5.8);    
+console.log(a);          //roundof value is 6   
+
+a=Math.round(5.2);
+console.log(a);       //roundof value is 5  
+
+
+a=Math.floor(3.908389);   
+console.log(a);      //floor is round a number down to the nearest integer.
+
+a=Math.ceil(7.2313483);
+console.log(a);    //ceil is round a number up to the nearest integer.
+
+a=Math.sqrt(81);
+console.log(a);    //square root of given value
+
+a=Math.abs(-20);
+console.log(a);  // It convert the negative value into positive value,which is known as absolute value. 
+
+a=Math.trunc(40.8472397);
+console.log(a);  // It Truncate(removes) the decimal values.
+
+a=Math.pow(5,2);
+console.log(a);   // It is used to find the power of given value,Here,(5,2) becomes (Base,power)
+
+a=Math.min(64,10,30,44,90,12,5,89,34,97,25,91);
+console.log(a);    //This function is Used to find the minimum value of the given Numbers.
+
+a=Math.max(64,10,30,44,90,12,8,89,34,97,25,91);
+console.log(a);     //This function is Used to find the maximum value of the given Numbers.
+
+a=Math.random();
+console.log(a);   //This function is generates the random value for each refresh.
+
+a=Math.random()*50+1;
+console.log(a);    // This also generates the random value,But it have the limit that is (1 to 50) .
+
+a=Math.floor((Math.random()*50+1));
+console.log(a);     // This also generates the random value,But it have the limit that is (1 to 50). And, It is also generate only the Integer,not a decimal.
+
+a=Math.sign(22);
+console.log(a);      // This function find the given value is positive or negative or zero.The Result is 1.
+
+a=Math.sign(-42);
+console.log(a);     // This function find the given value is positive or negative or zero.The Result is -1.
+
+
+a=Math.sign(0);
+console.log(a);    // This function find the given value is positive or negative or zero.The Result is 0.
+
+
+a=Math.sin(45);
+console.log(a);     //This function find the value of sin Tita.
+
+a=Math.cos(45);
+console.log(a);  //This function find the value of cos Tita.
+
+a=Math.tan(45);
+console.log(a);      //This function find the value of tan Tita.
+
+a=Math.log(90);
+console.log(a);	//This function find the value of log.
+
+a=Math.log2(90);
+console.log(a);	//This function find the value of log2.
+
+a=Math.log10(90);
+console.log(a);		//This function find the value of log10.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+
+
+</html>

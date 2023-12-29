@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>switch-statement</title>
+<style>
+
+h1{
+color:red;
+text-align:center;
+}
+
+#parseInt{
+color:white;
+background-color:black;
+font-size:30px;
+margin:1cm;
+padding:1cm;
+border:5px double red;
+}
+
+#parseInt p{
+color:yellow;
+font-style:italic;
+font-size:40px;
+}
+
+#switch{
+color:white;
+background-color:black;
+font-size:30px;
+margin:1cm;
+padding:1cm;
+border:5px double green;
+}
+
+#op h2{
+color:green;
+font-size:35px;
+}
+
+h3{
+margin:0px 18.5cm;
+padding:10px;
+border:3px solid green;
+background-color:lightgreen;
+border-radius:20px;
+text-align:center;
+}
+
+a{
+text-decoration:none;
+color:green;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+<h1>switch-statement</h1>
+
+<a href="#op"><h3>OUTPUT</h3></a>
+
+<div id="parseInt">
+<p>parseInt() is a function which is used to convert the string into number.</p>
+
+num=prompt("Enter Any Number"); <br>
+number=parseInt(num,10);<br>
+</div>
+
+<div id="switch">
+num=prompt("Enter Any Number");  <br>
+number=parseInt(num,10);<br><br>
+
+switch(number)<br>
+{<br>
+case 1:<br>
+console.log("one");<br>
+break;<br><br>
+
+case 2:<br>
+console.log("two");<br>
+break;<br><br>
+
+case 3:<br>
+console.log("Three");<br>
+break;<br><br>
+
+case 4:<br>
+console.log("four");<br>
+break;<br><br>
+
+case 5:<br>
+console.log("five");<br>
+break;<br><br>
+
+case 6:<br>
+console.log("six");<br>
+break;<br><br>
+
+default:<br>
+console.log("Invalid choice");<br>
+break;<br>
+}
+
+<div id="op">
+<h2>INPUT : 55</h2>
+<h2>OUTPUT : Invalid choice</h2>
+
+
+</div>
+
+</div>
+
+<script>
+
+alert("hii! welcome to JS");
+
+num=prompt("Enter Any Number");
+number=parseInt(num,10);
+
+switch(number)
+{
+case 1:
+console.log("one");
+break;
+
+case 2:
+console.log("two");
+break;
+
+case 3:
+console.log("Three");
+break;
+
+case 4:
+console.log("four");
+break;
+
+case 5:
+console.log("five");
+break;
+
+case 6:
+console.log("six");
+break;
+
+default:
+console.log("Invalid choice");
+break;
+}
+
+</script>
+</body>
+</html>

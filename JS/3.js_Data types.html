@@ -1,0 +1,150 @@
+<html>
+
+<head>
+<title>Data types</title>
+
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+h2{
+color:orange;
+text-align:center;
+}
+
+#dyn{
+color:darkblue;
+text-align:left;
+}
+
+
+dl{
+
+color:orange;
+font-size:30px;
+}
+
+.data{
+color:violet;
+text-align:left;
+font-size:35px;
+
+}
+
+h3{
+color:darkgreen;
+font-size:25px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<h1>JAVASCRIPT-3</h1>
+<h2>Data Types</h2>
+<h1 id=dyn><li>Javascript is a Dynamic programming Language [eg. a=10],Here we have not mentioned the data type.</li></h1>
+<h1 id=dyn><li>C,C++,Java,C#,rust,Swift, These are all some examples for Static programming Language.[eg. int a=10]</li></h1>
+<h1 id=dyn><li>Javascript,Python,Ruby,PHP,perl Lisp,These are all some Examples for Dynamic programming Language.</li></h1>
+
+<dl>
+<dt>DATA TYPES</dt>
+<dd>*Primitive data types</dd>
+<dd>*Reference data types</dd>
+</dl>
+
+<h2 class="data">PRIMITIVE DATA TYPES</h2>
+<h3>Number[eg:10,11.6]</h3>
+<h3>String[eg:sanjay,kgcas]</h3>
+<h3>Boolean[eg:True,False]</h3>
+<h3>NULL</h3>
+<h3>Undefined</h3>
+<h3>Symbols[]</h3>
+
+<h2 class="data">REFERENCE DATA TYPES</h2>
+<h3>Array</h3>
+<h3>Object Literals</h3>
+<h3>Date functions</h3>
+
+
+<script>
+
+
+
+alert("welcome to js");
+
+var a=50;
+console.log(typeof a);            /* output:Number  */
+
+var a=50.5;                   
+console.log(typeof a);          /* output:Number */
+
+var a="sanjay";
+console.log(typeof a);     /* output:string */
+
+var college="kgcas";
+console.log(typeof college);      /* output:string  */
+
+var isMarried=true;
+console.log(typeof isMarried);       /*  output:boolean   */
+
+var Eligible_vote=false;
+console.log(typeof Eligible_vote);        /*  output:boolean   */
+
+var phone1=null;
+console.log(typeof phone1);          /*  output:object */
+
+var phone2=123456789;
+console.log(typeof phone2);            /* output:Number */
+
+var b;
+console.log(typeof b);            /*  Undefined    */
+
+
+var s=Symbol();
+console.log(typeof s);
+                                            /*  The both symbols are unique with each other,It is not same,because It consist of different(unique) values.    */
+var r=Symbol();
+console.log(typeof r);
+
+console.log(s==r);   /* In this line , we have to check the two symbols [s & R] are equal or not.  */
+                             /*  output :false  */
+                            /*The result is false , so the two values of symbols are not equal   */
+                           /* SEE THE RESULT IN CONSOLE TAB.  */
+
+
+
+/* REFERENCE */
+
+var courses=['C','C++','JAVA'];
+console.log(typeof courses);		/* output:object  */
+
+var student={ 
+'name':'sanjay', 
+'age':18,
+'college':'kgcas',
+'branch':'software system'
+}
+
+console.log(typeof student);       /* output:object    */
+
+var d=new Date();
+/*  console.log(d);  */
+console.log(typeof d);    /* output:object  */
+
+
+
+</script>
+
+</body>
+
+
+
+
+
+
+</html>

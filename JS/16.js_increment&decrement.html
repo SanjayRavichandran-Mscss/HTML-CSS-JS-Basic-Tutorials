@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Increment & Decrement</title>
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+#postfix_INC,#prefix_INC,#postfix_DEC,#prefix_DEC{
+color:white;
+background-color:black;
+font-size:30px;
+margin:1cm;
+padding:1cm;
+border:5px solid green;
+}
+
+h2{
+text-align:center;
+color:blue;
+}
+h3{
+color:green;
+font-size:30px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Increment & Decrement</h1>
+
+<div id="postfix_INC">
+<h2>Postfix Increment</h2><br>
+var a=5;  <br>
+b=a++;<br>
+console.log("value of B:",b);<br>
+console.log("value of a:",a);<br>
+
+<h3>OUTPUT:value of B: 5 <br>
+ value of a: 6   </h3>
+
+
+</div>
+
+<div id="prefix_INC">
+<h2>Prefix Increment</h2><br>
+
+var a=5;<br>
+b=++a;<br>
+console.log("value of b:",b);<br>
+
+<h3>OUTPUT:   value of b: 6  </h3>
+
+</div>
+
+<div id="postfix_DEC">
+
+<h2>postfix Decrement</h2><br>
+var a=5;<br>
+b=a--;<br>
+console.log("value of B:",b);<br>
+console.log("value of a:",a);<br>
+
+<h3>OUTPUT: value of B: 5  <br>
+ value of a: 4
+    </h3>
+
+
+</div>
+
+<div id="prefix_DEC">
+<h2>Prefix Decrement</h2><br>
+var a=5;<br>
+b=--a;<br>
+console.log("value of b:",b);<br>
+
+<h3>  OUTPUT: value of b: 4  </h3>
+
+
+
+</div>
+
+
+<script>
+
+alert("hi!, welcome to JS");
+
+//postfix Increment 
+console.log("postfix Increment")
+
+var a=5;
+b=a++;
+console.log("value of B:",b);
+console.log("value of a:",a);
+
+//prefix Increment
+
+console.log("prefix Increment")
+
+var a=5;
+b=++a;
+console.log("value of b:",b);
+
+
+
+//postfix Decrement 
+console.log("postfix Decrement")
+
+var a=5;
+b=a--;
+console.log("value of B:",b);
+console.log("value of a:",a);
+
+//prefix Decrement
+
+console.log("prefix Decrement")
+
+var a=5;
+b=--a;
+console.log("value of b:",b);
+
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>converting to an array</title>
+<style>
+
+h1{
+color:red;
+text-align:Center;
+}
+
+#convert{
+color:white;
+background-color:black;
+border:3px solid green;
+margin:1cm;
+padding:1cm;
+font-size:30px;
+}
+
+#com{
+color:yellow;
+font-size:25px;
+}
+
+#out{
+color:green;
+background-color:gray;
+margin:1cm;
+padding:1cm;
+font-size:30px;
+border:3px solid green;
+}
+a{
+text-decoration:none;
+color:green;
+
+}
+button{
+margin-left:32cm;
+font-size:20px;
+padding:5px;
+border-radius:10px;
+background-color:grey;
+border-color:green;
+border-width:3px;
+}
+
+p{
+color:white;
+font-size:30px;
+font-style:italic;
+}
+</style>
+</head>
+<body>
+<h1>Looping over objects by converting to an array</h1>
+
+<button type="button"><a href="#out">output</a></button>
+<div id="convert">
+
+let user = {  <br>
+name: "sanjay",<br>
+Email: "sanjay@gmail.com",<br>
+password : 123456,<br>
+phone_number: 987654321,<br>
+};<br><br>
+
+let array_keys = Object.keys(user); <span id="com"> Here , <mark>Object.keys(user)</mark> is convert the object form into array form, and stored into the corresponding variable<mark>array_keys.</mark></span><br>
+console.log(array_keys);<br><br>
+
+let array_values = Object.values(user);<br>
+console.log(array_values);<span id="com"> Here , <mark>Object.values(user)</mark> is convert the object form into array form, and stored into the corresponding variable <mark>array_values.</mark></span><br><br>
+
+for(i=0;i<=array_keys.length;i++)<br>
+{<br>
+console.table(array_keys[i] + " : " +array_values[i]);<br>
+}
+<br>
+
+<div id="out">
+
+<p>OUTPUT :</p>
+
+0: "name"  <br>
+1: "Email"<br>
+2: "password"<br>
+3: "phone_number"<br>
+length: 4<br><br>
+0 : "sanjay"  <br>
+1 : "sanjay@gmail.com" <br>
+2 : 123456 <br>
+3 : 987654321 <br>
+length : 4 <br> <br>
+
+name : sanjay<br>
+Email : sanjay@gmail.com<br>
+password : 123456<br>
+phone_number : 987654321<br>
+
+
+
+</div>
+
+</div>
+
+
+<script>
+alert("hii! welcome to js");
+
+let user = {
+name: "sanjay",
+Email: "sanjay@gmail.com",
+password : 123456,
+phone_number: 987654321,
+};
+
+let array_keys = Object.keys(user);
+console.log(array_keys);
+
+let array_values = Object.values(user);
+console.log(array_values);	
+
+for(i=0;i<=array_keys.length;i++)
+{
+console.table(array_keys[i] + " : " +array_values[i]);
+}
+
+
+</script>
+
+</body>
+
+</html>

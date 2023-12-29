@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<title>JS-11</title>
+<style>
+
+h1{
+
+color:red;
+text-align:center;
+}
+
+ul{
+color:blue;
+font-size:30px;
+}
+
+#AND{
+width:auto;
+height:11cm;
+background-color:black;
+color:white;
+font-size:23px;
+padding:1cm;
+margin:1cm;
+}
+
+#OR{
+width:auto;
+height:11cm;
+background-color:black;
+color:white;
+font-size:23px;
+padding:1cm;
+margin:1cm;
+}
+
+#NOT{
+width:auto;
+height:11cm;
+background-color:black;
+color:white;
+font-size:23px;
+padding:1cm;
+margin:1cm;
+
+}
+
+
+
+h2{
+color:blue;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<h1>LOGICAL OPERATOR</h1>
+<ul>
+<li>Logical and(&&)</li>
+
+<li>Logical or(||)</li>
+
+<li>Logical not(!)</li>
+</ul>
+
+<div id="AND">
+
+<h2>AND operator</h2>
+
+var mark=40;   <br>
+console.log("mark=40");<br><br>
+
+console.log(mark>35 && mark<100)  <span>//OUTPUT :true</span><br><br>
+
+var mark=30;<br>
+console.log("mark=30");<br><br>
+
+console.log(mark>35 && mark>100) <span> //OUTPUT false</span><br><br>
+
+var mark=300;<br>
+console.log(mark>35 && mark<100)  <span>//OUTPUT false</span><br>
+
+</div>
+
+<div id="OR">
+
+<h2>OR operator</h2>
+
+let a=10;  <br>
+console.log(a==20 || a==40 || a==50 || a==10 || a==30)    // OUTPUT:true <br>
+
+</div>
+
+<div id="NOT">
+
+<h2>NOT operator</h2>
+
+var b=20;<br>
+console.log(b!==20);      //OUTPUT:false<br><br>
+
+var b=30;<br>
+console.log(b!==20);   //OUTPUT:true<br>
+
+
+
+
+</div>
+
+
+<script>
+
+alert("hai!, welcome to JS");
+
+
+//AND(&&) operator
+console.log("AND(&&) operator");
+var mark=40;
+console.log("mark=40");
+
+console.log(mark>35 && mark<100)  //OUTPUT :true
+
+var mark=30;
+console.log("mark=30");
+
+console.log(mark>35 && mark>100)  //OUTPUT false
+
+var mark=300;
+console.log(mark>35 && mark<100)  //OUTPUT false
+
+//OR(||) operator
+console.log("OR(||) operator");
+
+let a=10;
+console.log(a==20 || a==40 || a==50 || a==10 || a==30)    // OUTPUT:true
+
+//NOT(!) operator
+console.log("NOT(!) operator");
+
+var b=20;
+console.log(b!==20);      //OUTPUT:false
+
+var b=30;
+console.log(b!==20);   //OUTPUT:true
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>

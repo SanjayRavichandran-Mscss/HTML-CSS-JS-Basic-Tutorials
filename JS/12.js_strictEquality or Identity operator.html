@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>JS-12</title>
+<style>
+h1{
+color:red;
+text-align:center;
+}
+
+h2{
+
+color:blue;
+text-align:center;
+}
+
+table{
+border:3px solid black;
+border-collapse:collapse;
+padding:5px;
+margin-top:2cm;
+margin-left:2cm;
+}
+
+ tr,td,th{
+border:3px solid black;
+padding:5px;
+}
+
+th{
+background-color:skyblue;}
+
+#val{
+background-color:lightgray;
+}
+
+#out1{
+
+background-color:green;
+color:white;
+}
+
+#out2{
+background-color:red;
+color:white;
+}
+
+#strict{
+color:white;
+background-color:black;
+font-size:25px;
+width:20cm;
+height:6cm;
+margin:cm 0cm 0cm cm;
+padding:1cm;
+border:5px solid green;
+float:right;
+]
+}
+
+
+
+</style>
+</head>
+<body>
+<h1>STRICT EQUALITY OR IDENTITY OPERATOR(===)</h1>
+<h2>Identity operator means , It is checks the value and its data type, both the value and data-types are equal the output is true,otherwse the output is false.</h2>
+
+<table>
+<tbody>
+
+<tr>
+<th>X</th>
+<th>Y</th>
+<th>==</th>
+<th>===</th>
+</tr>
+
+<tr>
+<td id="val">undefined</td>
+<td  id="val">undefined</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">null</td>
+<td  id="val">null</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">tue</td>
+<td  id="val">true</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">false</td>
+<td  id="val">false</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">'sanjay'</td>
+<td id="val">'sanjay'</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">0</td>
+<td  id="val">0</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">+0</td>
+<td  id="val">-0</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">+0</td>
+<td  id="val">0</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">-0</td>
+<td  id="val">0</td>
+<td id="out1">true</td>
+<td id="out1">true</td>
+</tr>
+
+<tr>
+<td  id="val">0</td>
+<td id="val">FALSE</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+<tr>
+<td id="val">--(empty)</td>
+<td id="val">FALSE</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+<tr>
+<td id="val">--(empty)</td>
+<td id="val">0</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+<tr>
+<td id="val">'0'</td>
+<td id="val">0</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+<tr>
+<td id="val">'15'</td>
+<td id="val">15</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+<tr>
+<td id="val">new String('sanjay')</td>
+<td id="val">'sanjay'</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+<tr>
+<td id="val">null</td>
+<td id="val">undefined</td>
+<td id="out1">true</td>
+<td id="out2">false</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<div id="strict">
+
+let a=10;  <br>
+let b='10'; <br>
+console.log(a);               //OUTPUT:10  <br>
+console.log(b);              //OUTPUT:10<br>
+console.log(a==b);      //OUTPUT:true<br>
+console.log(a===b);    //OUTPUT:false<br>
+
+</div>
+
+
+<script>
+alert("hai!welcome to JS");
+
+let a=10;
+let b='10';
+console.log(a);               //OUTPUT:10
+console.log(b);              //OUTPUT:10
+console.log(a==b);      //OUTPUT:true
+console.log(a===b);    //OUTPUT:false
+
+
+
+</script>
+
+</body>
+
+</html>
